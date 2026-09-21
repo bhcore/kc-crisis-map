@@ -16,7 +16,12 @@
       "East"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2023",
     "rc_annual_calls": 3044,
     "rc_serves": "Bellevue",
@@ -39,7 +44,12 @@
       "East"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2012",
     "rc_annual_calls": 1644,
@@ -63,7 +73,12 @@
       "South"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Someone to Respond",
@@ -82,7 +97,12 @@
       "East"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Outreach/Engage",
@@ -101,7 +121,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -120,7 +146,13 @@
       "North"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -139,7 +171,13 @@
       "East"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -158,7 +196,13 @@
       "East"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -177,7 +221,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -196,7 +246,13 @@
       "East"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -215,7 +271,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -234,6 +296,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Crisis Stabilization"
   },
   {
@@ -253,6 +320,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Other"
   },
   {
@@ -272,6 +344,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Crisis Stabilization"
   },
   {
@@ -291,7 +368,12 @@
       "South"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -310,6 +392,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Crisis Stabilization"
   },
   {
@@ -329,6 +416,12 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -348,7 +441,13 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Someone to Respond",
@@ -367,7 +466,12 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "Mobile Rapid Response Crisis Team (MRRCT)",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2024",
     "rc_serves": "Seattle (HQ location; service area not reported)"
   },
@@ -388,29 +492,15 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "stc_subtype": "Designated Crisis Responder (DCR)"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "Designated Crisis Responder (DCR)",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Evaluation & Treatment"
   },
   {
     "category": "Outreach/Engage",
-    "program": "Emergency Services Patrol (ESP)",
-    "parent_org": "DCHS/BHRD",
-    "type": "Triage & Transportation",
-    "population": "Adult",
-    "geographic_area": "Downtown Seattle",
-    "how_accessed": "Outreach",
-    "refers_to": "Sobering Center, Case Management, Emergency Departments, Community Supports, Housing Supports",
-    "address": "401 5th Ave Ste 0400 Seattle, WA 98104",
-    "website": "Website is down",
-    "lat": 47.6025,
-    "lon": -122.3285,
-    "zones": [
-      "Central"
-    ],
-    "dot_style": "solid",
-    "oe_subtype": "Other"
-  },
-  {
-    "category": "Someone to Respond",
     "program": "Emergency Services Patrol (ESP)",
     "parent_org": "DCHS/BHRD",
     "type": "Triage & Transportation",
@@ -426,7 +516,13 @@
       "Central"
     ],
     "dot_style": "solid",
-    "stc_subtype": "Other"
+    "categories": [
+      "Outreach/Engage",
+      "Someone to Respond"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -445,6 +541,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -464,6 +565,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -483,6 +589,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -502,7 +613,13 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -521,6 +638,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Inpatient Psychiatry"
   },
   {
@@ -540,6 +662,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -559,6 +686,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -579,7 +711,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2023",
     "rc_annual_calls": 450,
@@ -603,7 +740,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Outreach/Engage",
@@ -622,7 +764,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Other"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Someone to Respond",
@@ -641,7 +788,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2016",
     "rc_serves": "King County, Pierce County, Snohomish County"
   },
@@ -663,7 +815,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Post-Crisis",
@@ -682,7 +840,12 @@
       "North"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2023",
     "rc_annual_calls": 1500,
@@ -706,7 +869,12 @@
       "North"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Other"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Post-Crisis",
@@ -726,6 +894,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -745,6 +919,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -765,7 +944,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Other"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Post-Crisis",
@@ -784,6 +969,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -803,7 +994,12 @@
       "South"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Someone to Respond",
@@ -822,7 +1018,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "Mobile Response and Stabilization Services (MRSS)",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2010 or earlier",
     "rc_annual_calls": 1000,
     "rc_serves": "King County"
@@ -844,7 +1045,12 @@
       "South"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -863,6 +1069,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -882,6 +1093,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -901,6 +1117,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -920,6 +1141,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -939,6 +1166,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Inpatient Psychiatry"
   },
   {
@@ -958,7 +1190,12 @@
       "East"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -977,6 +1214,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Inpatient Psychiatry"
   },
   {
@@ -996,7 +1238,12 @@
       "East"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1015,6 +1262,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -1034,6 +1286,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -1053,6 +1310,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1072,6 +1334,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Post-Crisis Follow-Up"
   },
   {
@@ -1091,6 +1359,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Post-Crisis Follow-Up"
   },
   {
@@ -1110,6 +1384,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Post-Crisis Follow-Up"
   },
   {
@@ -1129,6 +1409,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -1148,7 +1433,13 @@
       "East"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Someone to Respond",
@@ -1167,7 +1458,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2021",
     "rc_annual_calls": 450,
     "rc_serves": "Port of Seattle properties only (port/airport facilities within SeaTac, Seattle, Auburn, Burien, Des Moines) — does not provide general crisis response to residents of those cities",
@@ -1191,7 +1487,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2014",
     "rc_annual_calls": 2800,
@@ -1216,26 +1517,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
-  },
-  {
-    "category": "Post-Crisis",
-    "program": "Recovery Navigator Program - ETS-REACH",
-    "parent_org": "Evergreen Treatment Services (ETS)-REACH / King County Behavioral Health Outreach Program",
-    "type": "Community Stabilization",
-    "population": "Adult",
-    "geographic_area": "Seattle, White Center, Burien, Des Moines, Algona",
-    "how_accessed": "Referral",
-    "refers_to": "SUD treatment/Recovery services, Withdrawal management, BH care/counseling",
-    "address": "2133 3rd Ave Ste 116, Seattle, WA 98121",
-    "website": "https://www.recoverynavigatorprogram.org/",
-    "lat": 47.6137,
-    "lon": -122.3435,
-    "zones": [
-      "Central",
-      "South"
+    "categories": [
+      "Outreach/Engage",
+      "Post-Crisis"
     ],
-    "dot_style": "solid",
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -1257,27 +1545,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
-  },
-  {
-    "category": "Post-Crisis",
-    "program": "Recovery Navigator Program - Peer Washington",
-    "parent_org": "Peer Washington / King County Behavioral Health Outreach Program",
-    "type": "Community Stabilization",
-    "population": "Adult",
-    "geographic_area": "Auburn, Bellevue, Black Diamond, Bothell, Carnation, Covington, Clyde Hill, Des Moines, Duvall-Carnation, Enumclaw, Federal Way, Issaquah, Kent, Kenmore, Kirkland, Lake Forest Park, Maple Valley, Medina, Mercer Island, Milton, Newcastle, Normandy Park, North Bend, Pacific, Port of Seattle, Redmond, Renton, Sammamish, SeaTac, Shoreline, Skykomish, Snoqualmie, Tukwila, and Woodinville",
-    "how_accessed": "Referral",
-    "refers_to": "SUD treatment/Recovery services, Withdrawal management, BH care/counseling",
-    "address": "34709 9th Avenue South, Suite 300, Federal Way, WA 98003",
-    "website": "https://www.recoverynavigatorprogram.org/",
-    "lat": 47.2907,
-    "lon": -122.3237,
-    "zones": [
-      "East",
-      "North",
-      "South"
+    "categories": [
+      "Outreach/Engage",
+      "Post-Crisis"
     ],
-    "dot_style": "solid",
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -1297,6 +1571,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -1316,6 +1595,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -1335,7 +1619,12 @@
       "East"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH"
   },
   {
@@ -1355,7 +1644,12 @@
       "East"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2017",
     "rc_annual_calls": 750,
     "rc_serves": "Redmond",
@@ -1378,7 +1672,12 @@
       "North"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2016",
     "rc_annual_calls": 2000,
     "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
@@ -1403,7 +1702,13 @@
       "South"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Someone to Respond",
@@ -1422,7 +1727,12 @@
       "East"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Someone to Respond",
@@ -1441,33 +1751,15 @@
       "South"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Outreach/Engage",
-    "program": "Seattle CARE",
-    "parent_org": "City of Seattle",
-    "type": "Outreach",
-    "population": "Adult & Youth",
-    "geographic_area": "Seattle",
-    "how_accessed": "Outreach",
-    "refers_to": "CCCs, Regional Crisis Line, MRRCT, First Responders, DCR, Emergency Departments, Community resources, BH care/counseling, SUD treatment/Recovery services",
-    "address": "City Hall, 600 Fourth Ave. Seattle, WA 98104",
-    "website": "https://www.seattle.gov/care",
-    "lat": 47.6038,
-    "lon": -122.3299,
-    "zones": [
-      "Central"
-    ],
-    "dot_style": "solid",
-    "oe_subtype": "Outreach",
-    "rc_year_start": "2023",
-    "rc_annual_calls": 3000,
-    "rc_serves": "Seattle",
-    "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98112, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98125, 98126, 98129, 98131, 98133, 98134, 98136, 98144, 98146, 98148, 98154, 98155, 98158, 98161, 98164, 98166, 98168, 98170, 98174, 98177, 98178, 98181, 98185, 98188, 98190, 98191, 98195, 98198, 98199"
-  },
-  {
-    "category": "Someone to Respond",
     "program": "Seattle CARE",
     "parent_org": "City of Seattle",
     "type": "City-based civilian response",
@@ -1483,7 +1775,13 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Outreach/Engage",
+      "Someone to Respond"
+    ],
     "stc_subtype": "Alternative/community",
+    "oe_subtype": "City-Based Outreach",
+    "ptg_subtype": "Other",
     "rc_year_start": "2023",
     "rc_annual_calls": 3000,
     "rc_serves": "Seattle",
@@ -1506,6 +1804,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1525,6 +1828,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Other"
   },
   {
@@ -1544,6 +1852,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Inpatient Psychiatry"
   },
   {
@@ -1563,7 +1876,12 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2019",
     "rc_annual_calls": 2500,
@@ -1587,7 +1905,12 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Other"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Someone to Respond",
@@ -1606,7 +1929,12 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_annual_calls": 1500,
     "rc_serves": "Seattle",
     "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98112, 98113, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98125, 98126, 98133, 98134, 98136, 98141, 98144, 98146, 98154, 98161, 98165, 98170, 98174, 98175, 98177, 98178, 98181, 98185, 98190, 98191, 98194, 98199"
@@ -1628,7 +1956,12 @@
       "North"
     ],
     "dot_style": "hollow",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "",
     "rc_serves": "Shoreline (HQ location; service area not reported)"
@@ -1650,7 +1983,12 @@
       "North"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1669,6 +2007,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1688,6 +2031,11 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -1708,7 +2056,12 @@
       "North"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "Mobile Rapid Response Crisis Team (MRRCT)",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2024",
     "rc_annual_calls": 2689,
     "rc_serves": "King County",
@@ -1731,7 +2084,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Someone to Respond"
+    ],
     "stc_subtype": "Mobile Rapid Response Crisis Team (MRRCT)",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "rc_year_start": "2024",
     "rc_annual_calls": 2689,
     "rc_serves": "King County",
@@ -1754,7 +2112,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Post-Crisis",
@@ -1773,7 +2136,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2024",
     "rc_annual_calls": 44,
@@ -1797,6 +2165,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1816,6 +2189,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1835,6 +2213,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1854,6 +2237,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -1873,6 +2261,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1892,6 +2285,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1911,6 +2309,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1930,6 +2333,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Withdrawal Management"
   },
   {
@@ -1949,6 +2357,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -1968,6 +2381,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Evaluation & Treatment"
   },
   {
@@ -1987,6 +2405,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Crisis Stabilization"
   },
   {
@@ -2006,6 +2429,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -2025,7 +2454,12 @@
       "Central"
     ],
     "dot_style": "solid",
-    "stc_subtype": "Other"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -2044,6 +2478,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -2063,6 +2502,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Inpatient Psychiatry"
   },
   {
@@ -2082,6 +2526,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -2101,7 +2550,13 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Outreach/Engage",
@@ -2120,7 +2575,13 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -2139,6 +2600,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -2158,7 +2624,12 @@
       "South"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2016",
     "rc_annual_calls": 565,
@@ -2182,7 +2653,12 @@
       "Central"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
     "stc_subtype": "Fire/EMS co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2024",
     "rc_annual_calls": 1600,
@@ -2206,6 +2682,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Somewhere Safe to Go"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
     "ptg_subtype": "Emergency Department"
   },
   {
@@ -2225,6 +2706,12 @@
       "Countywide"
     ],
     "dot_style": "solid",
+    "categories": [
+      "Post-Crisis"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other",
     "pcc_subtype": "Community Stabilization"
   },
   {
@@ -2244,7 +2731,12 @@
       "North"
     ],
     "dot_style": "solid",
-    "stc_subtype": "LE co-response"
+    "categories": [
+      "Someone to Respond"
+    ],
+    "stc_subtype": "LE co-response",
+    "oe_subtype": "Other",
+    "ptg_subtype": "Other"
   },
   {
     "category": "Outreach/Engage",
@@ -2263,7 +2755,13 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "categories": [
+      "Outreach/Engage"
+    ],
+    "stc_subtype": "Other",
+    "oe_subtype": "Outreach",
+    "ptg_subtype": "Other",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Someone to Call",
