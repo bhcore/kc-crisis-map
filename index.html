@@ -398,6 +398,62 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
   };
   legend.addTo(map);
 
+  // ── Spiderfy — fan out stacked dots on click ─────────────────────────────
+  // Group allMarkers by lat/lon to find stacks.
+  const locGroups = new Map();
+  allMarkers.forEach(entry => {
+    const ll  = entry.marker.getLatLng();
+    const key = `${ll.lat},${ll.lng}`;
+    if (!locGroups.has(key)) locGroups.set(key, []);
+    locGroups.get(key).push(entry);
+  });
+
+  let spiderfied = null; // { key, origLat, origLng, entries }
+
+  function unspiderfy() {
+    if (!spiderfied) return;
+    spiderfied.entries.forEach(e =>
+      e.marker.setLatLng([spiderfied.origLat, spiderfied.origLng]));
+    spiderfied = null;
+  }
+
+  function spiderfy(key) {
+    unspiderfy();
+    const all     = locGroups.get(key) || [];
+    const visible = all.filter(e => map.hasLayer(e.marker));
+    if (visible.length <= 1) return;
+    const origLat = visible[0].marker.getLatLng().lat;
+    const origLng = visible[0].marker.getLatLng().lng;
+    const n       = visible.length;
+    const R       = 0.00035; // ~30 m radius in degrees
+    const cosLat  = Math.cos(origLat * Math.PI / 180);
+    visible.forEach((e, i) => {
+      const angle = (2 * Math.PI * i / n) - Math.PI / 2;
+      e.marker.setLatLng([
+        origLat + R * Math.sin(angle),
+        origLng + R * Math.cos(angle) / cosLat
+      ]);
+    });
+    spiderfied = { key, origLat, origLng, entries: visible };
+  }
+
+  // Wire click handlers for stacked locations
+  allMarkers.forEach(entry => {
+    const ll  = entry.marker.getLatLng();
+    const key = `${ll.lat},${ll.lng}`;
+    if ((locGroups.get(key) || []).length > 1) {
+      entry.marker.on('click', e => {
+        if (!spiderfied || spiderfied.key !== key) {
+          L.DomEvent.stopPropagation(e); // suppress popup on first click
+          spiderfy(key);
+        }
+        // already fanned — let click through so popup opens normally
+      });
+    }
+  });
+
+  map.on('click', unspiderfy);
+
   // ── Filter logic ─────────────────────────────────────────────────────────
   function getChecked(attr) {
     return Array.from(document.querySelectorAll(`input[data-${attr}]:checked`))
@@ -411,6 +467,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
   }
 
   function applyFilter() {
+    unspiderfy();
     const zone     = document.getElementById("kc-zone-select").value;
     const stcVals  = getChecked("kcstc");
     const oeVals   = getChecked("kcoe");
