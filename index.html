@@ -484,11 +484,17 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     if ((locGroups.get(key) || []).length > 1) {
       entry.marker.on('click', e => {
         if (!spiderfied || spiderfied.key !== key) {
-          L.DomEvent.stopPropagation(e);
-          spiderfy(key);
-          map.closePopup(); // close popup bindPopup may have opened before our handler
+          // Only suppress popup and fan if ≥2 dots are currently visible here
+          const visCount = (locGroups.get(key) || [])
+            .filter(en => map.hasLayer(en.marker)).length;
+          if (visCount >= 2) {
+            L.DomEvent.stopPropagation(e);
+            spiderfy(key);
+            map.closePopup();
+          }
+          // Single visible dot at a stacked location — let popup open normally
         }
-        // already fanned — let click through so popup opens normally
+        // Already fanned — let click through so popup opens normally
       });
     }
   });
