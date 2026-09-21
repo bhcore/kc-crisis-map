@@ -92,27 +92,19 @@ kcs_enriched <- kcs_raw |>
   left_join(crosswalk, by = c("program" = "spreadsheet_program")) |>
   left_join(pd_enrich, by = "record_id")
 
-# Collapse multi-zone rows → one record per program with a zones list.
-# Group by (program, lat, lon) — not category — so programs listed under
-# multiple categories at the same address merge into one marker with a
-# categories[] array (e.g. ESP appears in both Outreach/Engage and
-# Someone to Respond but should show as one dot).
+# Collapse multi-zone rows → one record per program+category with a zones list.
 zones_df <- kcs_enriched |>
-  group_by(program, lat, lon) |>
-  summarise(
-    zones      = list(sort(unique(crz_zone[!is.na(crz_zone) & nzchar(crz_zone)]))),
-    categories = list(sort(unique(category[!is.na(category)]))),
-    .groups    = "drop"
-  )
+  group_by(program, category, lat, lon) |>
+  summarise(zones = list(sort(unique(crz_zone[!is.na(crz_zone) & nzchar(crz_zone)]))),
+            .groups = "drop")
 
 base_df <- kcs_enriched |>
-  group_by(program, lat, lon) |>
+  group_by(program, category, lat, lon) |>
   slice(1) |>
   ungroup() |>
-  select(-crz_zone, -category) |>
-  left_join(zones_df, by = c("program","lat","lon")) |>
+  select(-crz_zone) |>
+  left_join(zones_df, by = c("program","category","lat","lon")) |>
   mutate(
-    category = sapply(categories, `[[`, 1),
     zones = lapply(zones, function(z) {
       if (length(z) == 0) return("Countywide")
       if ("Countywide" %in% z) return("Countywide")
@@ -120,13 +112,11 @@ base_df <- kcs_enriched |>
     }),
     dot_style   = ifelse(!is.na(rc_survey_status) & rc_survey_status == "not_surveyed",
                          "hollow", "solid"),
-    # Compute all subtypes unconditionally so multi-category programs have
-    # the right subtype available for each category they appear in.
-    stc_subtype = classify_stc(type),
-    stc_subtype = ifelse(type == "FD MIH/CARES", "Fire/EMS co-response", stc_subtype),
-    oe_subtype  = classify_oe(type, program),
-    ptg_subtype = classify_ptg(type),
-    pcc_subtype = classify_pcc(type)
+    stc_subtype = ifelse(category == "Someone to Respond",   classify_stc(type),         NA_character_),
+    stc_subtype = ifelse(type == "FD MIH/CARES",            "Fire/EMS co-response",      stc_subtype),
+    oe_subtype  = ifelse(category == "Outreach/Engage",      classify_oe(type, program),  NA_character_),
+    ptg_subtype = ifelse(category == "Somewhere Safe to Go", classify_ptg(type),          NA_character_),
+    pcc_subtype = ifelse(category == "Post-Crisis",          classify_pcc(type),          NA_character_)
   )
 
 cat("Mappable programs (deduplicated):", nrow(base_df), "\n")
@@ -152,7 +142,6 @@ row_to_obj <- function(r, include_map_fields = TRUE) {
     obj$lon         <- if (!is.na(r$lon))              r$lon            else NULL
     obj$zones       <- as.list(r$zones[[1]])
     obj$dot_style   <- if (nn(r$dot_style))            r$dot_style      else "solid"
-    obj$categories  <- as.list(r$categories[[1]])
     obj$stc_subtype <- if (nn(r$stc_subtype))          r$stc_subtype    else NULL
     obj$oe_subtype  <- if (nn(r$oe_subtype))           r$oe_subtype     else NULL
     obj$ptg_subtype <- if (nn(r$ptg_subtype))          r$ptg_subtype    else NULL
