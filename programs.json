@@ -91,9 +91,9 @@
     "type": "Outreach",
     "population": "Adult & Youth",
     "geographic_area": "Covington",
-    "how_accessed": "Call the City Human Services Dept",
-    "refers_to": "Need to add",
-    "address": "16720 SE 271st Street, Suite 100 Covington, WA 98042-4964",
+    "how_accessed": "Call the City Human Services Dept / Community Care Program (253-480-2444)",
+    "refers_to": "Financial Resources, Food Resources, Housing Resources, Sheter, Health Resources, Legal Resources, Other Community Resources",
+    "address": "16720 SE 271st Street, Suite 100 Covington, WA 98042",
     "website": "https://www.covingtonwa.gov/residentresources.php",
     "lat": 47.3592,
     "lon": -122.1181,
@@ -105,13 +105,13 @@
   },
   {
     "category": "Outreach/Engage",
-    "program": "City Outreach Team (Homeless Assistance Response Team) - Kirkland",
+    "program": "City Outreach Team (Homeless Assistance Response Team (HART)) - Kirkland",
     "parent_org": "City of Kirkland",
     "type": "Outreach",
     "population": "Adult & Youth",
     "geographic_area": "Kirkland",
-    "how_accessed": "Call the City Human Services Dept",
-    "refers_to": "Need to add",
+    "how_accessed": "Call the City Human Services Dept / HART, or submit online request via \"Our Kirkland Portal\": https://kirklandwa.qscend.com/ourkirkland/",
+    "refers_to": "Food Resources, Emergency Shelter, Financial Resources, Housing Resources, Education Resources, Health Care Resources, Other Community Resources, Other Outreach, Kirkland Fire MIH",
     "address": "123 5th Ave Kirkland, Washington 98033",
     "website": "https://www.kirklandwa.gov/Government/City-Managers-Office/Homelessness-in-Kirkland/Meet-the-Homelessness-Assistance-Response-Team",
     "lat": 47.6782,
@@ -124,13 +124,32 @@
   },
   {
     "category": "Outreach/Engage",
+    "program": "City Outreach Team (Homeless Outreach Program (HOP)) - Redmond",
+    "parent_org": "City of Redmond",
+    "type": "Outreach",
+    "population": "Adult & Youth",
+    "geographic_area": "Redmond",
+    "how_accessed": "Call the City Human Services Dept / Homeless Outreach Program (425-553-7093)",
+    "refers_to": "Housing Resources, Food Resources, Financial Resources, Legal Resources, Other Outreach, Employment Resources, Health Resources, Other Community Resources, Redmond Fire MIH",
+    "address": "15670 NE 85th Street, Redmond, WA 98073",
+    "website": "https://www.redmond.gov/1589/THRIVE-Community-Health-Program",
+    "lat": 47.679,
+    "lon": -122.1309,
+    "zones": [
+      "East"
+    ],
+    "dot_style": "solid",
+    "oe_subtype": "City-Based Outreach"
+  },
+  {
+    "category": "Outreach/Engage",
     "program": "City Outreach Team (Homeless Outreach Program) - Issaquah",
     "parent_org": "City of Issaquah",
     "type": "Outreach",
     "population": "Adult & Youth",
     "geographic_area": "Issaquah",
-    "how_accessed": "Call the City Human Services Dept",
-    "refers_to": "Need to add",
+    "how_accessed": "Call the City Human Services Dept / Homeless Outreach Program (425-837-3416)",
+    "refers_to": "Shelter, Housing Resources, Financial Resources, Food Resources, Health Care Resources, Other Community Resources, Other Outreach",
     "address": "130 E Sunset Way Issaquah, WA 98027",
     "website": "https://www.issaquahwa.gov/3281/Homeless-Outreach-Program",
     "lat": 47.5303,
@@ -148,8 +167,8 @@
     "type": "Outreach",
     "population": "Adult & Youth",
     "geographic_area": "Auburn",
-    "how_accessed": "Call the City Human Services Dept",
-    "refers_to": "Need to add",
+    "how_accessed": "Call the City Human Services Dept (253-294-6429)",
+    "refers_to": "Food Resources, Emergency Shelter, Housing Resources, Health Care Resources, Other Community Resources, Other Outreach",
     "address": "25 W Main Street, Auburn, WA 98001",
     "website": "https://www.auburnwa.gov/city_hall/human_services",
     "lat": 47.3078,
@@ -167,31 +186,12 @@
     "type": "Outreach",
     "population": "Adult & Youth",
     "geographic_area": "Bellevue",
-    "how_accessed": "Call the City Human Services Dept",
-    "refers_to": "Need to add",
+    "how_accessed": "Call the City Human Services Dept (425-452-6884)",
+    "refers_to": "Shelter, Housing Resources, Financial Resources, Food Resources, Health Care Resources, Other Community Resources",
     "address": "450 110th Avenue NE Bellevue, WA 98004",
     "website": "https://bellevuewa.gov/city-government/departments/parks/community-services/human-services",
     "lat": 47.6144,
     "lon": -122.1922,
-    "zones": [
-      "East"
-    ],
-    "dot_style": "solid",
-    "oe_subtype": "City-Based Outreach"
-  },
-  {
-    "category": "Outreach/Engage",
-    "program": "City Outreach Team - Redmond",
-    "parent_org": "City of Redmond",
-    "type": "Outreach",
-    "population": "Adult & Youth",
-    "geographic_area": "Redmond",
-    "how_accessed": "Call the City Human Services Dept",
-    "refers_to": "Housing Supports",
-    "address": "15670 NE 85th Street, Redmond, WA 98073-9710",
-    "website": "https://www.redmond.gov/625/Human-Services",
-    "lat": 47.679,
-    "lon": -122.1309,
     "zones": [
       "East"
     ],
@@ -206,7 +206,7 @@
     "population": "Adult & Youth",
     "geographic_area": "Renton",
     "how_accessed": "Call the City Human Services Dept (425-430-6650)",
-    "refers_to": "Need to add",
+    "refers_to": "FD Cares, Emergency Shelter, Housing Resources, Food Resources, Financial Resources, Other Outreach, Other Community Resources",
     "address": "1055 S. Grady Way Renton, Washington, 98507",
     "website": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Resources/Human-Services",
     "lat": 47.4748,
@@ -231,7 +231,7 @@
     "lat": 47.7095,
     "lon": -122.1881,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Crisis Stabilization"
@@ -250,7 +250,7 @@
     "lat": 47.7095,
     "lon": -122.1881,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Other"
@@ -269,7 +269,7 @@
     "lat": 47.6126,
     "lon": -122.3211,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Crisis Stabilization"
@@ -307,7 +307,7 @@
     "lat": 47.597,
     "lon": -122.311,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Crisis Stabilization"
@@ -356,7 +356,7 @@
     "parent_org": "DESC",
     "type": "Mobile Rapid Response Crisis Team",
     "population": "Adult",
-    "geographic_area": "Central, Vashon",
+    "geographic_area": "Central",
     "how_accessed": "988, Regional Crisis Line",
     "refers_to": "CCCs, DCR, Regional Fire MIH/CARES, Emergency Departments, BH care/counseling, Housing & Emergency Shelter Supports, Withdrawal Management Facilities, SUD treatment/Recovery services, Recovery Supports, Community Resources, Primary care/Medical care",
     "address": "515 Third Avenue, Seattle, WA 98104",
@@ -372,11 +372,68 @@
     "rc_serves": "Seattle (HQ location; service area not reported)"
   },
   {
+    "category": "Someone to Respond",
+    "program": "Designated Crisis Responder (DCR)",
+    "parent_org": "King County Behavioral Health Outreach Program",
+    "type": "Crisis evaluation",
+    "population": "Adult & Youth",
+    "geographic_area": "Countywide",
+    "how_accessed": "988, Public/professional referral",
+    "refers_to": "CCCs, Inpatient Psychiatric Care, Withdrawal Management, E&T, Secure Withdrawal Management (SWMS), BH outpatient treatment, SUD treatment/Recovery services, Emergency Department",
+    "address": "401 5th Ave., Suite 400 Seattle, WA 98104",
+    "website": "https://dchsblog.com/2024/06/28/get-to-know-king-countys-behavioral-health-outreach-teams/",
+    "lat": 47.6025,
+    "lon": -122.3286,
+    "zones": [
+      "Countywide"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Designated Crisis Responder (DCR)"
+  },
+  {
+    "category": "Outreach/Engage",
+    "program": "Emergency Services Patrol (ESP)",
+    "parent_org": "DCHS/BHRD",
+    "type": "Triage & Transportation",
+    "population": "Adult",
+    "geographic_area": "Downtown Seattle",
+    "how_accessed": "Outreach",
+    "refers_to": "Sobering Center, Case Management, Emergency Departments, Community Supports, Housing Supports",
+    "address": "401 5th Ave Ste 0400 Seattle, WA 98104",
+    "website": "Website is down",
+    "lat": 47.6025,
+    "lon": -122.3285,
+    "zones": [
+      "Central"
+    ],
+    "dot_style": "solid",
+    "oe_subtype": "Other"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Emergency Services Patrol (ESP)",
+    "parent_org": "DCHS/BHRD",
+    "type": "Triage & Transportation",
+    "population": "Adult",
+    "geographic_area": "Downtown Seattle",
+    "how_accessed": "First Responder referral, hospital/provider referral",
+    "refers_to": "Sobering Center, Intensive Case Management, Fire/EMS, Emergency Departments",
+    "address": "401 5th Ave Ste 0400 Seattle, WA 98104",
+    "website": "Website is down",
+    "lat": 47.6025,
+    "lon": -122.3285,
+    "zones": [
+      "Central"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Other"
+  },
+  {
     "category": "Somewhere Safe to Go",
     "program": "EvergreenHealth ED",
     "parent_org": "EvergreenHealth",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -385,7 +442,7 @@
     "lat": 47.7162,
     "lon": -122.1792,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -404,7 +461,7 @@
     "lat": 47.7192,
     "lon": -122.2042,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -423,7 +480,7 @@
     "lat": 47.7192,
     "lon": -122.2042,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -461,7 +518,7 @@
     "lat": 47.6044,
     "lon": -122.3239,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Inpatient Psychiatry"
@@ -471,7 +528,7 @@
     "program": "Harborview Medical Center ED",
     "parent_org": "UW Medicine",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -480,7 +537,7 @@
     "lat": 47.6044,
     "lon": -122.3239,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -499,7 +556,7 @@
     "lat": 47.7024,
     "lon": -122.2074,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -594,7 +651,7 @@
     "parent_org": "King County",
     "type": "Outreach",
     "population": "Adult",
-    "geographic_area": "Renton, Burien, Seattle, Tukwila, Ken, Federal Way",
+    "geographic_area": "Renton, Burien, Seattle, Tukwila, Kent, Federal Way",
     "how_accessed": "Outreach, Referral",
     "refers_to": "Primary care/Medical care, Harm reduction services, BH care/counseling, SUD treatment/Recovery services, Food resources, Shelter resources, Financial/benefits support",
     "address": "401 Fifth Ave., Seattle, WA 98104",
@@ -685,7 +742,7 @@
     "lat": 47.7193,
     "lon": -122.2025,
     "zones": [
-      "North"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -794,7 +851,7 @@
     "program": "MultiCare Auburn ED",
     "parent_org": "MultiCare Health System",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -803,7 +860,7 @@
     "lat": 47.3088,
     "lon": -122.229,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -822,7 +879,7 @@
     "lat": 47.3088,
     "lon": -122.229,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -832,7 +889,7 @@
     "program": "MultiCare Covington ED",
     "parent_org": "MultiCare Health System",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -841,10 +898,29 @@
     "lat": 47.359,
     "lon": -122.104,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
+  },
+  {
+    "category": "Post-Crisis",
+    "program": "Native Resource Hub",
+    "parent_org": "For Our Lives",
+    "type": "Community Stabilization",
+    "population": "Adult & Youth",
+    "geographic_area": "Countywide",
+    "how_accessed": "Self-referral (call 1-866-491-1683, Monday through Friday, 8:00 a.m. to 5:00 p.m.)",
+    "refers_to": "AA/Withdrawal management/recovery resources, childcare resources, clothing resources, cultural resources (powwows, sweats, gatherings), domestic violence resources, durable medical equipment support, utility & energy assistance resources, financial assistance resources, food pantry/hot food resources, health insurance resources, hot shower resources, ​housing resources/ homelessness prevention, BH care/counseling, SUD treatment, connection to legal assistance, LGBTQIA+2S resources, support groups (grief and loss, parent, domestic violence, veterans), therapy and counseling resources, transportation resources, vocational rehab",
+    "address": "Central: Seattle Indian Health Board, 611 12th Avenue South, Seattle, 98144",
+    "website": "https://fornativelives.org/support",
+    "lat": 47.5971,
+    "lon": -122.3182,
+    "zones": [
+      "Countywide"
+    ],
+    "dot_style": "solid",
+    "pcc_subtype": "Community Stabilization"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -860,7 +936,7 @@
     "lat": 47.5344,
     "lon": -122.3661,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Inpatient Psychiatry"
@@ -898,7 +974,7 @@
     "lat": 47.62,
     "lon": -122.1875,
     "zones": [
-      "East"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Inpatient Psychiatry"
@@ -936,7 +1012,7 @@
     "lat": 47.6025,
     "lon": -122.3313,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -955,7 +1031,7 @@
     "lat": 47.4873,
     "lon": -122.2959,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -965,7 +1041,7 @@
     "program": "Overlake ED",
     "parent_org": "Overlake Medical Center",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -974,7 +1050,7 @@
     "lat": 47.62,
     "lon": -122.1875,
     "zones": [
-      "East"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -986,7 +1062,7 @@
     "type": "Post-Crisis Follow-Up center",
     "population": "Adult",
     "geographic_area": "Countywide",
-    "how_accessed": null,
+    "how_accessed": "Not yet operating",
     "refers_to": "BH care/counseling, Housing Resources, SUD treatment/Recovery services",
     "address": "8615 14th Ave S, Seattle, WA 98108",
     "website": "https://www.consejocounseling.org/",
@@ -1005,7 +1081,7 @@
     "type": "Post-Crisis Follow-Up center",
     "population": "Adult",
     "geographic_area": "Countywide",
-    "how_accessed": null,
+    "how_accessed": "Not yet operating",
     "refers_to": "BH care/counseling, Housing Resources, SUD treatment/Recovery services",
     "address": "110 Prefontaine Pl S, Suite 502, Seattle, WA 98104",
     "website": "https://wearepda.org/",
@@ -1024,7 +1100,7 @@
     "type": "Post-Crisis Follow-Up center",
     "population": "Adult",
     "geographic_area": "Countywide",
-    "how_accessed": null,
+    "how_accessed": "Not yet operating",
     "refers_to": "BH care/counseling, Housing Resources, SUD treatment/Recovery services",
     "address": "6400 Southcenter Blvd Tukwila, WA 98188",
     "website": "https://www.sound.health/",
@@ -1050,7 +1126,7 @@
     "lat": 47.6101,
     "lon": -122.3222,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -1080,7 +1156,7 @@
     "parent_org": "Port of Seattle",
     "type": "Law Enforcement Co-Response",
     "population": "Adult & Youth",
-    "geographic_area": "Port of Seattle facilities",
+    "geographic_area": "SeaTac Airport",
     "how_accessed": "911, First Responder referral, Self-dispatch, Community Request",
     "refers_to": "CCCs, DCR, Emergency Department, Community Resources",
     "address": "17801 International Blvd, SeaTac, WA 98158",
@@ -1129,8 +1205,8 @@
     "type": "Outreach",
     "population": "Adult",
     "geographic_area": "Seattle, White Center, Burien, Des Moines, Algona",
-    "how_accessed": "Referral",
-    "refers_to": "SUD treatment/Recovery services, Withdrawal management, BH care/counseling",
+    "how_accessed": "Referral (call 206-392-0050)",
+    "refers_to": "Basic needs, Community organizations, Harm reduction programs, Housing resources, Public benefits, SUD treatment/Recovery services, Withdrawal management, BH care/counseling",
     "address": "2133 3rd Ave Ste 116, Seattle, WA 98121",
     "website": "https://www.recoverynavigatorprogram.org/",
     "lat": 47.6137,
@@ -1169,8 +1245,8 @@
     "type": "Outreach",
     "population": "Adult",
     "geographic_area": "Auburn, Bellevue, Black Diamond, Bothell, Carnation, Covington, Clyde Hill, Des Moines, Duvall-Carnation, Enumclaw, Federal Way, Issaquah, Kent, Kenmore, Kirkland, Lake Forest Park, Maple Valley, Medina, Mercer Island, Milton, Newcastle, Normandy Park, North Bend, Pacific, Port of Seattle, Redmond, Renton, Sammamish, SeaTac, Shoreline, Skykomish, Snoqualmie, Tukwila, and Woodinville",
-    "how_accessed": "Referral",
-    "refers_to": "SUD treatment/Recovery services, Withdrawal management, BH care/counseling",
+    "how_accessed": "Referral (call 800-767-5604)",
+    "refers_to": "Basic needs, Community organizations, Harm reduction programs, Housing resources, Public benefits, SUD treatment/Recovery services, Withdrawal management, BH care/counseling",
     "address": "34709 9th Avenue South, Suite 300, Federal Way, WA 98003",
     "website": "https://www.recoverynavigatorprogram.org/",
     "lat": 47.2907,
@@ -1218,7 +1294,7 @@
     "lat": 47.3773,
     "lon": -122.2483,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -1237,7 +1313,7 @@
     "lat": 47.5881,
     "lon": -122.3101,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -1294,7 +1370,7 @@
     "geographic_area": "Bothell, Kenmore, Kirkland, Lake Forest Park, and Shoreline",
     "how_accessed": "911, First Responder referral, Self-dispatch",
     "refers_to": "Shoreline Fire MIH, Kirkland Fire Department, Kirkland Fire MIH, CCCs, DCR, Emergency Department, Community Resources, BH care/counseling, Social Services, Primary care/Medical care",
-    "address": "17500 Midvale Ave N Shoreline, WA 98133-4905\n\n123 5th Ave Kirkland, Washington 98033\n\n18415 101st Avenue NE Bothell, WA 98011\n\n18120 68th Ave NE Kenmore, WA 98028\n\n17425 Ballinger Way NE Lake Forest Park, WA 98155",
+    "address": "17500 Midvale Ave N Shoreline, WA 98133-4905| \n\n123 5th Ave Kirkland, Washington 98033 | \n\n18415 101st Avenue NE Bothell, WA 98011 | \n\n18120 68th Ave NE Kenmore, WA 98028 | \n\n17425 Ballinger Way NE Lake Forest Park, WA 98155",
     "website": "https://www.shorelinewa.gov/government/departments/police-department/radar\n\nhttps://www.kirklandwa.gov/Government/City-Managers-Office/The-Regional-Crisis-Response-Agency\n\nhttps://www.bothellwa.gov/1795/Regional-Crisis-Response-Agency\n\nhttps://cityoflfp.gov/622/Regional-Crisis-Response-Agency",
     "lat": 47.7562,
     "lon": -122.3436,
@@ -1315,7 +1391,7 @@
     "type": "Outreach",
     "population": "Adult & Families",
     "geographic_area": "Seattle, East King, South King",
-    "how_accessed": "Outreach",
+    "how_accessed": "Outreach, Referral",
     "refers_to": "Housing and Shelter Resources, Community Supports",
     "address": "1101 Pike St, Seattle, WA 98101",
     "website": "https://kingcounty.salvationarmy.org/king_county/street-level/",
@@ -1418,7 +1494,7 @@
     "program": "Seattle Children's ED",
     "parent_org": "Seattle Children's Hospital",
     "type": "Emergency Department",
-    "population": "Youth",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), Youth CCC (future), DCR",
@@ -1427,7 +1503,7 @@
     "lat": 47.6623,
     "lon": -122.2825,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1446,7 +1522,7 @@
     "lat": 47.6784,
     "lon": -122.2643,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Other"
@@ -1465,7 +1541,7 @@
     "lat": 47.6623,
     "lon": -122.2831,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Inpatient Psychiatry"
@@ -1581,7 +1657,7 @@
     "program": "Snoqualmie Valley Hospital ED",
     "parent_org": "Snoqualmie Valley Health",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1590,7 +1666,7 @@
     "lat": 47.5131,
     "lon": -121.8859,
     "zones": [
-      "East"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1644,7 +1720,7 @@
     "parent_org": "Sound Behavioral Health",
     "type": "Mobile Rapid Response Crisis Team",
     "population": "Adult",
-    "geographic_area": "South county (except Vashon)",
+    "geographic_area": "South county",
     "how_accessed": "988, Regional Crisis Line",
     "refers_to": "CCCs, DCR, Regional Fire MIH/CARES, Emergency Departments, BH care/counseling, Housing & Emergency Shelter Supports, Withdrawal Management Facilities, SUD treatment/Recovery services, Recovery Supports, Community Resources, Primary care/Medical care",
     "address": "6400 Southcenter Blvd Tukwila, WA 98188",
@@ -1687,7 +1763,7 @@
     "type": "FD MIH/CARES",
     "population": "Adult & Youth",
     "geographic_area": "Federal Way, Des Moines, Milton",
-    "how_accessed": "First Responder referral",
+    "how_accessed": "911, First Responder referral",
     "refers_to": "SUD treatment/Recovery services",
     "address": "31617 1st Ave S. Federal Way, WA 98003",
     "website": "https://southkingfire.org/",
@@ -1709,7 +1785,7 @@
     "program": "St. Anne Hospital ED",
     "parent_org": "Franciscan Health",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1718,7 +1794,7 @@
     "lat": 47.4575,
     "lon": -122.3432,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1728,7 +1804,7 @@
     "program": "St. Francis Hospital ED",
     "parent_org": "Franciscan Health",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1737,7 +1813,7 @@
     "lat": 47.2925,
     "lon": -122.3271,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1747,7 +1823,7 @@
     "program": "Swedish Ballard ED",
     "parent_org": "Providence Swedish",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1756,7 +1832,7 @@
     "lat": 47.6682,
     "lon": -122.3805,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1775,7 +1851,7 @@
     "lat": 47.6681,
     "lon": -122.3807,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -1785,7 +1861,7 @@
     "program": "Swedish Cherry Hill ED",
     "parent_org": "Providence Swedish",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1794,7 +1870,7 @@
     "lat": 47.607,
     "lon": -122.3112,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1804,7 +1880,7 @@
     "program": "Swedish First Hill ED",
     "parent_org": "Providence Swedish",
     "type": "Emergency Department",
-    "population": "Adult & Youth",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1813,7 +1889,7 @@
     "lat": 47.6081,
     "lon": -122.3219,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1823,7 +1899,7 @@
     "program": "Swedish Issaquah ED",
     "parent_org": "Providence Swedish",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1832,7 +1908,7 @@
     "lat": 47.536,
     "lon": -122.0206,
     "zones": [
-      "East"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1851,7 +1927,7 @@
     "lat": 47.6095,
     "lon": -122.3223,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -1861,7 +1937,7 @@
     "program": "Swedish Redmond ED",
     "parent_org": "Providence Swedish",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1870,7 +1946,7 @@
     "lat": 47.6761,
     "lon": -122.0993,
     "zones": [
-      "East"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1889,7 +1965,7 @@
     "lat": 47.302,
     "lon": -122.3158,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Evaluation & Treatment"
@@ -1898,7 +1974,7 @@
     "category": "Somewhere Safe to Go",
     "program": "Thunderbird Treatment Center",
     "parent_org": "Seattle Indian Health Board",
-    "type": null,
+    "type": "Not open yet",
     "population": "Adult",
     "geographic_area": "Countywide",
     "how_accessed": "Referral, Self-referral/Walk-in",
@@ -1908,10 +1984,10 @@
     "lat": 47.4673,
     "lon": -122.4614,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Other"
+    "ptg_subtype": "Crisis Stabilization"
   },
   {
     "category": "Post-Crisis",
@@ -1956,7 +2032,7 @@
     "program": "UW Medical Center Montlake ED",
     "parent_org": "UW Medicine",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -1965,7 +2041,7 @@
     "lat": 47.6482,
     "lon": -122.3052,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -1984,7 +2060,7 @@
     "lat": 47.7145,
     "lon": -122.3359,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Inpatient Psychiatry"
@@ -1994,7 +2070,7 @@
     "program": "UW Medical Center Northwest ED",
     "parent_org": "UW Medicine",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -2003,7 +2079,7 @@
     "lat": 47.7145,
     "lon": -122.3359,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -2035,7 +2111,7 @@
     "population": "Adult",
     "geographic_area": "Seattle",
     "how_accessed": "Outreach",
-    "refers_to": "FoShelter resources",
+    "refers_to": "Shelter resources",
     "address": "3800 S Othello St Seattle, WA 98118",
     "website": "https://www.ugm.org/what-we-do/outreach/external-affairs",
     "lat": 47.5383,
@@ -2051,7 +2127,7 @@
     "program": "Valley Medical Center ED",
     "parent_org": "Valley Medical Center",
     "type": "Emergency Department",
-    "population": "Adult & Youth",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -2060,7 +2136,7 @@
     "lat": 47.4424,
     "lon": -122.2142,
     "zones": [
-      "South"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -2118,7 +2194,7 @@
     "program": "Virginia Mason ED",
     "parent_org": "Franciscan Health",
     "type": "Emergency Department",
-    "population": "Adult",
+    "population": "All",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), CCC, Withdrawal Management, DCR",
@@ -2127,7 +2203,7 @@
     "lat": 47.6101,
     "lon": -122.3263,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Emergency Department"
@@ -2150,25 +2226,6 @@
     ],
     "dot_style": "solid",
     "pcc_subtype": "Community Stabilization"
-  },
-  {
-    "category": "Someone to Respond",
-    "program": "WISe",
-    "parent_org": "Lutheran Community Services Northwest",
-    "type": "Youth crisis response",
-    "population": "Youth",
-    "geographic_area": "Countywide",
-    "how_accessed": "Self-dispatch, Community Request, Referrals",
-    "refers_to": "MRSS, DCR, Emergency Department, Youth CCC (future), Youth BH care/counseling, Family Support",
-    "address": "1107 NE 45th St Ste 200, Seattle, WA 98105",
-    "website": "https://lcsnw.org/program/wise-wraparound-with-intensive-services/",
-    "lat": 47.6611,
-    "lon": -122.3163,
-    "zones": [
-      "Countywide"
-    ],
-    "dot_style": "solid",
-    "stc_subtype": "Mobile Response and Stabilization Services (MRSS)"
   },
   {
     "category": "Someone to Respond",
@@ -2243,7 +2300,7 @@
     "type": "Mobile crisis dispatch",
     "population": "Adult & Youth",
     "geographic_area": "Countywide",
-    "how_accessed": "Direct call",
+    "how_accessed": "Direct call, text, or chat",
     "refers_to": "MRRCT, MRSS, DCR, 911, Crisis Care Centers, ED, BH care/counseling, SUD treatment/Recovery services",
     "website": "https://doh.wa.gov/you-and-your-family/injury-and-violence-prevention/suicide-prevention/988-suicide-crisis-lifeline",
     "lat": null,
@@ -2285,7 +2342,7 @@
     "type": "Resource hotline",
     "population": "Adult & Youth",
     "geographic_area": "Countywide",
-    "how_accessed": "Direct call",
+    "how_accessed": "Direct call or text",
     "refers_to": "SUD treatment/Recovery services, Recovery support, Withdrawal management, Medications for opioid use disorder (MOUD), WA Telebuprenorphine Hotline, Syringe Service Programs",
     "website": "https://crisisconnections.org/programs/recovery-help-line/",
     "lat": null,
