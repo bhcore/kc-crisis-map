@@ -455,7 +455,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     const origLat = visible[0].marker.getLatLng().lat;
     const origLng = visible[0].marker.getLatLng().lng;
     const n       = visible.length;
-    const R       = 0.00035; // ~30 m radius in degrees
+    const R       = 0.0009; // ~80 m radius in degrees
     const cosLat  = Math.cos(origLat * Math.PI / 180);
     const lines   = [];
 
@@ -484,8 +484,9 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     if ((locGroups.get(key) || []).length > 1) {
       entry.marker.on('click', e => {
         if (!spiderfied || spiderfied.key !== key) {
-          L.DomEvent.stopPropagation(e); // suppress popup on first click
+          L.DomEvent.stopPropagation(e);
           spiderfy(key);
+          map.closePopup(); // close popup bindPopup may have opened before our handler
         }
         // already fanned — let click through so popup opens normally
       });
