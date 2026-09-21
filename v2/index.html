@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King County Crisis Response Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    #map { width: 100%; height: 100vh; }
+
+    .kc-toolbar {
+      background: #fff;
+      padding: 10px 12px;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.3);
+      font-family: sans-serif;
+      max-height: 88vh;
+      overflow-y: auto;
+      width: 270px;
+    }
+    .cat-hdr {
+      font-weight: 700;
+      font-size: 12px;
+      border-radius: 4px;
+      padding: 4px 7px;
+      margin: 10px 0 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cat-arrow { font-size: 9px; }
+    .cat-swatch {
+      display: inline-block;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      border: 1px solid #555;
+      flex-shrink: 0;
+    }
+    .cat-body { margin-bottom: 2px; }
+    .cb-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 3px 0;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .cb-indent { padding-left: 6px; }
+    .stc-item { margin: 0; }
+    .stc-hdr {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      user-select: none;
+    }
+    .stc-hdr:hover { opacity: 0.75; }
+    .stc-arrow { font-size: 9px; color: #666; flex-shrink: 0; }
+    .stc-detail {
+      padding: 2px 0 2px 14px;
+      border-left: 2px solid #ddd;
+      margin-left: 4px;
+      display: none;
+    }
+    .hl-area:hover {
+      stroke: #111 !important;
+      stroke-width: 3 !important;
+      stroke-opacity: 1 !important;
+      fill-opacity: 0.6 !important;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+// ── Constants ──────────────────────────────────────────────────────────────────
+const CAT_COLORS = {
+  "Someone to Respond":   "#FFC000",
+  "Outreach/Engage":      "#4472C4",
+  "Somewhere Safe to Go": "#70AD47",
+  "Post-Crisis":          "#9B59B6"
+};
+const ZONE_COLORS = {
+  Central: "#e6ab02", North: "#1b9e77",
+  East:    "#7570b3", South: "#d95f02"
+};
+const STC_TYPES = [
+  "LE co-response",
+  "Fire/EMS co-response",
+  "Alternative/community",
+  "Designated Crisis Responder (DCR)",
+  "Mobile Rapid Response Crisis Team (MRRCT)",
+  "Mobile Response and Stabilization Services (MRSS)",
+  "Other"
+];
+const OE_TYPES  = ["City-Based Outreach", "Outreach", "Other"];
+const PTG_TYPES = [
+  "Emergency Department", "Crisis Stabilization", "Evaluation & Treatment",
+  "Withdrawal Management", "Inpatient Psychiatry", "Other"
+];
+const PCC_TYPES = ["Fire-Based / MIH", "Post-Crisis Follow-Up", "Community Stabilization"];
+
+// ── Utilities ──────────────────────────────────────────────────────────────────
+const esc  = s => s == null ? "" :
+  String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+           .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const slug = s => String(s).replace(/[^A-Za-z0-9]+/g,"_");
+const nn   = v => v != null && String(v).trim() !== "";
+
+function makePopup(p) {
+  const row = (label, val) =>
+    nn(val) ? `<div style="font-size:11px"><b>${label}:</b> ${esc(val)}</div>` : "";
+  const serves = nn(p.rc_serves) ? p.rc_serves : p.geographic_area;
+  return `<div style="min-width:200px;max-width:320px">
+    <b style="font-size:14px">${esc(p.program)}</b>
+    ${nn(p.parent_org) ? `<br><i style="font-size:11px">${esc(p.parent_org)}</i>` : ""}
+    <hr style="margin:5px 0">
+    ${row("Type",        p.type)}
+    ${row("Population",  p.population)}
+    ${row("Year started",p.rc_year_start)}
+    ${row("Serves",      serves)}
+    ${nn(p.rc_annual_calls)
+      ? `<div style="font-size:11px"><b>Annual calls:</b> ~${esc(p.rc_annual_calls)}</div>` : ""}
+    ${row("How to refer",  p.how_accessed)}
+    ${row("Refers to",     p.refers_to)}
+    ${row("ZIP codes served", p.rc_zips)}
+    ${row("Address",       p.address)}
+    ${nn(p.website)
+      ? `<div style="font-size:11px"><a href="${esc(p.website)}" target="_blank" rel="noopener">Website</a></div>` : ""}
+  </div>`;
+}
+
+// ── Load data ──────────────────────────────────────────────────────────────────
+Promise.all([
+  fetch("programs.json").then(r => r.json()),
+  fetch("layers/kc_zones.geojson").then(r => r.json()),
+  fetch("layers/psap_kc.geojson").then(r => r.json()),
+  fetch("layers/leg_kc.geojson").then(r => r.json()),
+  fetch("layers/fire_districts.geojson").then(r => r.json())
+]).then(([programs, zonesGeo, psapGeo, legGeo, fireGeo]) => {
+  initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo);
+}).catch(err => {
+  document.getElementById("map").innerHTML =
+    `<div style="padding:30px;font-family:sans-serif;color:red">
+      <b>Error loading map data:</b> ${esc(err.message)}<br><br>
+      If opening locally, run: <code>python3 -m http.server</code> and open
+      <a href="http://localhost:8000">http://localhost:8000</a>
+    </div>`;
+});
+
+// ── Main map function ──────────────────────────────────────────────────────────
+function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
+
+  // ── Map + basemap ────────────────────────────────────────────────────────
+  const map = L.map("map", { minZoom:9, zoomSnap:0.25, zoomDelta:0.5 })
+    .fitBounds([[47.07,-122.55],[47.82,-121.06]]);
+
+  L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+    { attribution:"Tiles &copy; Esri", maxZoom:16 }
+  ).addTo(map);
+
+  map.createPane("zones");    map.getPane("zones").style.zIndex    = 410;
+  map.createPane("overlays"); map.getPane("overlays").style.zIndex = 414;
+  map.createPane("dots");     map.getPane("dots").style.zIndex     = 420;
+
+  // ── CRZ zone polygons ────────────────────────────────────────────────────
+  const zonePolyStyle = document.createElement("style");
+  document.head.appendChild(zonePolyStyle);
+
+  L.geoJSON(zonesGeo, {
+    pane: "zones",
+    style: f => ({
+      fillColor:   ZONE_COLORS[f.properties.zone] || "#aaa",
+      fillOpacity: 0,
+      color:       ZONE_COLORS[f.properties.zone] || "#aaa",
+      weight: 1.5, opacity: 0.5,
+      interactive: false,
+      className: "kzone_poly_" + (f.properties.zone||"").toLowerCase()
+    })
+  }).addTo(map);
+
+  function updateZonePolygons(zone) {
+    let css = "";
+    ["central","north","east","south"].forEach(z => {
+      const isAll      = zone === "all";
+      const isSelected = !isAll && zone.toLowerCase() === z;
+      const col = ZONE_COLORS[z.charAt(0).toUpperCase() + z.slice(1)];
+      css += `path.kzone_poly_${z}{`
+           + `fill:${col}!important;`
+           + `fill-opacity:${isAll ? 0.22 : isSelected ? 0.40 : 0.03}!important;`
+           + `stroke-opacity:${isAll ? 0.80 : isSelected ? 0.95 : 0.15}!important;`
+           + `stroke-width:${isAll ? 2 : isSelected ? 3 : 1.5}px!important}`;
+    });
+    zonePolyStyle.textContent = css;
+  }
+
+  // ── Overlay layers ───────────────────────────────────────────────────────
+  const psapLayer = L.geoJSON(psapGeo, {
+    pane: "overlays",
+    style: { fillColor:"#8c564b", fillOpacity:0.35, color:"#8c564b", weight:1.5,
+             className:"hl-area kc_overlay_fill" },
+    onEachFeature: (f,l) => {
+      l.bindPopup(`<b>${esc(f.properties.psap_name)}</b>
+                   <br><span style="font-size:11px;color:#666">PSAP</span>`);
+      l.bindTooltip("PSAP: " + f.properties.psap_name);
+    }
+  });
+
+  const legLayer = L.geoJSON(legGeo, {
+    pane: "overlays",
+    style: { fillColor:"#1f77b4", fillOpacity:0.35, color:"#1f77b4", weight:1,
+             className:"hl-area kc_overlay_fill" },
+    onEachFeature: (f,l) =>
+      l.bindTooltip("Legislative District " + f.properties.DISTRICT)
+  });
+
+  const fireLayer = L.geoJSON(fireGeo, {
+    pane: "overlays",
+    style: { fillColor:"#cc4125", fillOpacity:0.25, color:"#cc4125", weight:1.5,
+             className:"hl-area kc_overlay_fill" },
+    onEachFeature: (f,l) => {
+      l.bindPopup(`<div style="min-width:200px;max-width:300px">
+        <b style="font-size:13px">${esc(f.properties.NAME)}</b>
+        <hr style="margin:5px 0">
+        <div style="font-size:11px"><b>Type:</b> ${esc(f.properties.fire_type)}</div>
+        <div style="font-size:11px;color:#888;font-style:italic;margin-top:4px">
+          Includes fire protection districts, regional fire authorities,
+          and municipal fire departments.</div></div>`);
+      l.bindTooltip(`<b>${esc(f.properties.NAME)}</b>`);
+    }
+  });
+
+  const overlayGroups = {
+    "PSAP Boundaries":       psapLayer,
+    "Legislative Districts": legLayer,
+    "Fire Districts":        fireLayer
+  };
+
+  // ── Program markers ──────────────────────────────────────────────────────
+  // allMarkers: [{marker, renderAs, subtype, zones}]
+  // FD MIH/CARES appear twice: once as Post-Crisis, once as Someone to Respond.
+  const allMarkers = [];
+
+  programs
+    .filter(p => p.lat != null && p.lon != null)
+    .forEach(p => {
+      const zones = Array.isArray(p.zones) ? p.zones : (p.zones ? [p.zones] : ["Countywide"]);
+      const solid = p.dot_style !== "hollow";
+
+      const addMarker = (renderAs, subtype) => {
+        if (!subtype && renderAs !== "Somewhere Safe to Go") return;
+        const col = CAT_COLORS[renderAs] || "#888";
+        const m = L.circleMarker([p.lat, p.lon], {
+          pane:        "dots",
+          radius:      6,
+          color:       solid ? "#333333" : col,
+          weight:      solid ? 1 : 2.5,
+          fillColor:   solid ? col : "#ffffff",
+          fillOpacity: 0.9,
+          opacity:     1
+        })
+        .bindPopup(makePopup(p))
+        .bindTooltip(`<b>${esc(p.program)}</b>`);
+        allMarkers.push({ marker: m, renderAs, subtype, zones });
+      };
+
+      const cat = p.category;
+
+      if (cat === "Post-Crisis" && p.type === "FD MIH/CARES") {
+        // Dual-layer: appears in both Post-Crisis and Someone to Respond
+        addMarker("Post-Crisis",        p.pcc_subtype);
+        addMarker("Someone to Respond", p.stc_subtype);
+      } else if (cat === "Someone to Respond") {
+        addMarker(cat, p.stc_subtype);
+      } else if (cat === "Outreach/Engage") {
+        addMarker(cat, p.oe_subtype);
+      } else if (cat === "Somewhere Safe to Go") {
+        addMarker(cat, p.ptg_subtype);
+      } else if (cat === "Post-Crisis") {
+        addMarker(cat, p.pcc_subtype);
+      }
+    });
+
+  // ── Toolbar ──────────────────────────────────────────────────────────────
+  const stcAccordion = programs
+    .filter(p => p.category === "Someone to Call")
+    .map(p => {
+      const fields = [
+        p.type          ? `<div style="font-size:11px"><b>Type:</b> ${esc(p.type)}</div>` : "",
+        p.population    ? `<div style="font-size:11px"><b>Population:</b> ${esc(p.population)}</div>` : "",
+        p.geographic_area ? `<div style="font-size:11px"><b>Serves:</b> ${esc(p.geographic_area)}</div>` : "",
+        p.how_accessed  ? `<div style="font-size:11px"><b>How to access:</b> ${esc(p.how_accessed)}</div>` : "",
+        p.refers_to     ? `<div style="font-size:11px"><b>Refers to:</b> ${esc(p.refers_to)}</div>` : "",
+        p.website       ? `<div style="font-size:11px"><a href="${esc(p.website)}" target="_blank" rel="noopener">Website</a></div>` : ""
+      ].join("");
+      return `<div class="stc-item">
+        <div class="stc-hdr" onclick="toggleStc(this)">
+          <span class="stc-arrow">&#9654;</span>${esc(p.program)}
+        </div>
+        <div class="stc-detail">${fields}</div>
+      </div>`;
+    }).join("");
+
+  const cbox = (attr, val, lbl) =>
+    `<label class="cb-label"><input type="checkbox" data-${attr}="${slug(val)}">${esc(lbl)}</label>`;
+
+  const catSection = (id, title, bg, border, textCol, swCol, allAttr, allVal, subs, open=false) => `
+    <div class="cat-hdr" data-target="${id}" onclick="toggleCat(this)"
+         style="color:${textCol};background:${bg};border:1px solid ${border}">
+      <span class="cat-arrow">${open ? "&#9660;" : "&#9654;"}</span>
+      <span class="cat-swatch" style="background:${swCol}"></span>
+      ${title}
+    </div>
+    <div id="${id}" class="cat-body" style="${open ? "" : "display:none"}">
+      ${allAttr
+        ? `<label class="cb-label"><input type="checkbox" data-${allAttr}="${slug(allVal)}">All</label>`
+        : ""}
+      <div class="cb-indent">${subs}</div>
+    </div>`;
+
+  const toolbarHtml = `
+    <div class="kc-toolbar" id="kc-toolbar">
+      <div style="font-weight:700;font-size:15px;margin-bottom:2px">KC Crisis Response Map</div>
+      <div style="font-size:11px;color:#777;margin-bottom:8px">King County &middot; BHCore / UW SSW &middot; 2026</div>
+
+      <div style="font-weight:600;font-size:12px;color:#444;margin:6px 0 3px">MAP OVERLAY</div>
+      <select id="kc-overlay-select" style="width:100%;font-size:13px;padding:3px">
+        <option value="None">None</option>
+        <option value="PSAP Boundaries">PSAP Boundaries</option>
+        <option value="Legislative Districts">Legislative Districts</option>
+        <option value="Fire Districts">Fire Districts</option>
+      </select>
+      <div id="kc-overlay-opacity-ctrl" style="display:none;margin:3px 0 4px">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:#555;margin:2px 0">
+          <span>Opacity</span><span id="kc-overlay-opacity-val">35%</span>
+        </div>
+        <input type="range" id="kc-overlay-opacity" min="0" max="100" value="35"
+               style="width:100%;cursor:pointer;margin:1px 0">
+      </div>
+
+      <div style="font-weight:600;font-size:12px;color:#444;margin:8px 0 3px">ZONE FILTER</div>
+      <select id="kc-zone-select" style="width:100%;font-size:13px;padding:3px">
+        <option value="all">All zones</option>
+        <option value="Central">Central (Seattle)</option>
+        <option value="North">North (Kirkland, Shoreline, Bothell&hellip;)</option>
+        <option value="East">East (Bellevue, Redmond, Issaquah&hellip;)</option>
+        <option value="South">South (Kent, Renton, Federal Way&hellip;)</option>
+      </select>
+
+      ${catSection("cat-oe","OUTREACH / ENGAGE","#D9E2F3","#4472C4","#2b4d8a",
+          CAT_COLORS["Outreach/Engage"], "kccat","Outreach/Engage",
+          OE_TYPES.map(t=>cbox("kcoe",t,t)).join(""))}
+
+      ${catSection("cat-stc2","SOMEONE TO CALL","#FCE4D6","#F4B183","#7a4a2a","#F4B183",
+          null, null, stcAccordion)}
+
+      ${catSection("cat-stc","SOMEONE TO RESPOND","#FEF2CC","#FFC000","#7d5a00",
+          CAT_COLORS["Someone to Respond"], "kccat","Someone to Respond",
+          STC_TYPES.map(t=>cbox("kcstc",t,t)).join(""), true)}
+
+      ${catSection("cat-ptg","SOMEWHERE SAFE TO GO","#E2EFDA","#70AD47","#2a5e1a",
+          CAT_COLORS["Somewhere Safe to Go"], "kccat","Somewhere Safe to Go",
+          PTG_TYPES.map(t=>cbox("kcptg",t,t)).join(""))}
+
+      ${catSection("cat-pcc","POST-CRISIS","#EAD9F5","#9B59B6","#5b2d7a",
+          CAT_COLORS["Post-Crisis"], "kccat","Post-Crisis",
+          PCC_TYPES.map(t=>cbox("kcpcc",t,t)).join(""))}
+    </div>`;
+
+  const toolbarCtrl = L.control({ position:"topright" });
+  toolbarCtrl.onAdd = () => {
+    const div = L.DomUtil.create("div");
+    div.innerHTML = toolbarHtml;
+    L.DomEvent.disableClickPropagation(div);
+    L.DomEvent.disableScrollPropagation(div);
+    return div;
+  };
+  toolbarCtrl.addTo(map);
+
+  // ── Zone legend ──────────────────────────────────────────────────────────
+  const legend = L.control({ position:"bottomleft" });
+  legend.onAdd = () => {
+    const div = L.DomUtil.create("div","leaflet-control leaflet-bar");
+    div.style.cssText = "background:#fff;padding:8px 10px;font-family:sans-serif;font-size:13px;line-height:1.8";
+    div.innerHTML = "<b style='font-size:12px;display:block;margin-bottom:2px'>CRZ Zone</b>" +
+      Object.entries(ZONE_COLORS).map(([z,c]) =>
+        `<span style="display:inline-block;width:14px;height:14px;background:${c};`
+       + `opacity:0.7;border-radius:2px;margin-right:5px;vertical-align:middle"></span>${z}`
+      ).join("<br>");
+    return div;
+  };
+  legend.addTo(map);
+
+  // ── Filter logic ─────────────────────────────────────────────────────────
+  function getChecked(attr) {
+    return Array.from(document.querySelectorAll(`input[data-${attr}]:checked`))
+      .map(cb => cb.getAttribute(`data-${attr}`));
+  }
+
+  function zoneMatch(zones, selected) {
+    if (selected === "all") return true;
+    if (zones.includes("Countywide")) return true;
+    return zones.includes(selected);
+  }
+
+  function applyFilter() {
+    const zone     = document.getElementById("kc-zone-select").value;
+    const stcVals  = getChecked("kcstc");
+    const oeVals   = getChecked("kcoe");
+    const ptgVals  = getChecked("kcptg");
+    const pccVals  = getChecked("kcpcc");
+
+    allMarkers.forEach(({ marker, renderAs, subtype, zones }) => {
+      let checkedVals;
+      if      (renderAs === "Someone to Respond")   checkedVals = stcVals;
+      else if (renderAs === "Outreach/Engage")      checkedVals = oeVals;
+      else if (renderAs === "Somewhere Safe to Go") checkedVals = ptgVals;
+      else if (renderAs === "Post-Crisis")          checkedVals = pccVals;
+      else    checkedVals = [];
+
+      const subtypeOk = renderAs === "Somewhere Safe to Go"
+        ? (subtype ? checkedVals.includes(slug(subtype)) : false)
+        : (subtype != null && checkedVals.includes(slug(subtype)));
+      const zoneOk = zoneMatch(zones, zone);
+
+      if (subtypeOk && zoneOk) {
+        if (!map.hasLayer(marker)) marker.addTo(map);
+      } else {
+        if (map.hasLayer(marker)) marker.remove();
+      }
+    });
+
+    updateZonePolygons(zone);
+  }
+
+  // ── Wire event handlers after DOM is ready ───────────────────────────────
+  setTimeout(() => {
+    const bar = document.getElementById("kc-toolbar");
+    if (!bar) return;
+
+    window.toggleCat = hdr => {
+      const body  = document.getElementById(hdr.getAttribute("data-target"));
+      const arrow = hdr.querySelector(".cat-arrow");
+      const open  = body.style.display !== "none";
+      body.style.display = open ? "none" : "block";
+      arrow.innerHTML = open ? "&#9654;" : "&#9660;";
+    };
+    window.toggleStc = hdr => {
+      const detail = hdr.nextElementSibling;
+      const arrow  = hdr.querySelector(".stc-arrow");
+      const open   = detail.style.display !== "none";
+      detail.style.display = open ? "none" : "block";
+      arrow.innerHTML = open ? "&#9654;" : "&#9660;";
+    };
+
+    // Each category's "All" checkbox drives its sub-type checkboxes
+    [
+      ["kccat","Someone_to_Respond",  "kcstc"],
+      ["kccat","Outreach_Engage",     "kcoe"],
+      ["kccat","Somewhere_Safe_to_Go","kcptg"],
+      ["kccat","Post_Crisis",         "kcpcc"]
+    ].forEach(([catAttr, catVal, subAttr]) => {
+      const allCb  = bar.querySelector(`input[data-${catAttr}="${catVal}"]`);
+      const subCbs = bar.querySelectorAll(`input[data-${subAttr}]`);
+      if (!allCb) return;
+      allCb.addEventListener("change", () => {
+        subCbs.forEach(cb => cb.checked = allCb.checked);
+        applyFilter();
+      });
+      subCbs.forEach(cb => cb.addEventListener("change", () => {
+        allCb.checked = Array.from(subCbs).every(c => c.checked);
+        applyFilter();
+      }));
+    });
+
+    document.getElementById("kc-zone-select").addEventListener("change", applyFilter);
+
+    // Overlay dropdown + opacity slider
+    const osel    = document.getElementById("kc-overlay-select");
+    const oCtrl   = document.getElementById("kc-overlay-opacity-ctrl");
+    const oSlider = document.getElementById("kc-overlay-opacity");
+    const oValLbl = document.getElementById("kc-overlay-opacity-val");
+
+    function applyOverlayOpacity(val) {
+      document.querySelectorAll(".kc_overlay_fill")
+        .forEach(p => { p.style.fillOpacity = val / 100; });
+    }
+    osel.addEventListener("change", () => {
+      const chosen = osel.value;
+      Object.entries(overlayGroups).forEach(([name, layer]) => {
+        if (name === chosen) layer.addTo(map); else layer.remove();
+      });
+      oCtrl.style.display = chosen === "None" ? "none" : "";
+      if (oSlider) setTimeout(() => applyOverlayOpacity(parseInt(oSlider.value)), 200);
+    });
+    oSlider.addEventListener("input", function() {
+      oValLbl.textContent = this.value + "%";
+      applyOverlayOpacity(parseInt(this.value));
+    });
+
+    // Default state: Someone to Respond all checked, rest unchecked → applyFilter
+    const stcAllCb = bar.querySelector('input[data-kccat="Someone_to_Respond"]');
+    if (stcAllCb) stcAllCb.checked = true;
+    bar.querySelectorAll("input[data-kcstc]").forEach(cb => cb.checked = true);
+
+    updateZonePolygons("all");
+    applyFilter();
+  }, 300);
+}
+</script>
+</body>
+</html>
