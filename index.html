@@ -451,15 +451,6 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
       const open  = body.style.display !== "none";
       body.style.display = open ? "none" : "block";
       arrow.innerHTML = open ? "&#9654;" : "&#9660;";
-      // Also toggle the All checkbox and its subtypes so clicking the header
-      // shows/hides markers without requiring a separate checkbox click.
-      const allCb = body.querySelector("input[data-kccat]");
-      if (allCb) {
-        allCb.checked = !open;
-        body.querySelectorAll("input[data-kcstc],input[data-kcoe],input[data-kcptg],input[data-kcpcc]")
-          .forEach(cb => cb.checked = !open);
-        applyFilter();
-      }
     };
     window.toggleStc = hdr => {
       const detail = hdr.nextElementSibling;
