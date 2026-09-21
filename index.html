@@ -244,9 +244,19 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
   };
 
   // ── Program markers ──────────────────────────────────────────────────────
-  // allMarkers: [{marker, renderAs, subtype, zones}]
-  // FD MIH/CARES appear twice: once as Post-Crisis, once as Someone to Respond.
+  // allMarkers: [{marker, catEntries: [{renderAs, subtype}], zones}]
+  // Programs with multiple categories (e.g. ESP) produce one shared dot;
+  // the dot is visible if ANY of its catEntries has its subtype checked.
+  // FD MIH/CARES still gets two separate dots (Post-Crisis + Someone to Respond).
   const allMarkers = [];
+
+  const subtypeFor = (p, cat) => {
+    if (cat === "Someone to Respond")   return p.stc_subtype;
+    if (cat === "Outreach/Engage")      return p.oe_subtype;
+    if (cat === "Somewhere Safe to Go") return p.ptg_subtype;
+    if (cat === "Post-Crisis")          return p.pcc_subtype;
+    return null;
+  };
 
   programs
     .filter(p => p.lat != null && p.lon != null)
@@ -254,9 +264,8 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
       const zones = Array.isArray(p.zones) ? p.zones : (p.zones ? [p.zones] : ["Countywide"]);
       const solid = p.dot_style !== "hollow";
 
-      const addMarker = (renderAs, subtype) => {
-        if (!subtype && renderAs !== "Somewhere Safe to Go") return;
-        const col = CAT_COLORS[renderAs] || "#888";
+      const makeDot = (primaryCat, catEntries) => {
+        const col = CAT_COLORS[primaryCat] || "#888";
         const m = L.circleMarker([p.lat, p.lon], {
           pane:        "dots",
           radius:      6,
@@ -268,23 +277,21 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
         })
         .bindPopup(makePopup(p))
         .bindTooltip(`<b>${esc(p.program)}</b>`);
-        allMarkers.push({ marker: m, renderAs, subtype, zones });
+        allMarkers.push({ marker: m, catEntries, zones });
       };
 
-      const cat = p.category;
-
-      if (cat === "Post-Crisis" && p.type === "FD MIH/CARES") {
-        // Dual-layer: appears in both Post-Crisis and Someone to Respond
-        addMarker("Post-Crisis",        p.pcc_subtype);
-        addMarker("Someone to Respond", p.stc_subtype);
-      } else if (cat === "Someone to Respond") {
-        addMarker(cat, p.stc_subtype);
-      } else if (cat === "Outreach/Engage") {
-        addMarker(cat, p.oe_subtype);
-      } else if (cat === "Somewhere Safe to Go") {
-        addMarker(cat, p.ptg_subtype);
-      } else if (cat === "Post-Crisis") {
-        addMarker(cat, p.pcc_subtype);
+      if (p.type === "FD MIH/CARES") {
+        // Dual dots: one per layer (intentional — different colors)
+        makeDot("Post-Crisis",        [{ renderAs: "Post-Crisis",        subtype: p.pcc_subtype }]);
+        makeDot("Someone to Respond", [{ renderAs: "Someone to Respond", subtype: p.stc_subtype }]);
+      } else {
+        // Single shared dot for all categories this program belongs to
+        const cats = Array.isArray(p.categories) && p.categories.length > 0
+          ? p.categories : [p.category];
+        const catEntries = cats
+          .map(cat => ({ renderAs: cat, subtype: subtypeFor(p, cat) }))
+          .filter(e => e.subtype != null || e.renderAs === "Somewhere Safe to Go");
+        if (catEntries.length > 0) makeDot(cats[0], catEntries);
       }
     });
 
@@ -417,17 +424,21 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     const ptgVals  = getChecked("kcptg");
     const pccVals  = getChecked("kcpcc");
 
-    allMarkers.forEach(({ marker, renderAs, subtype, zones }) => {
-      let checkedVals;
-      if      (renderAs === "Someone to Respond")   checkedVals = stcVals;
-      else if (renderAs === "Outreach/Engage")      checkedVals = oeVals;
-      else if (renderAs === "Somewhere Safe to Go") checkedVals = ptgVals;
-      else if (renderAs === "Post-Crisis")          checkedVals = pccVals;
-      else    checkedVals = [];
-
-      const subtypeOk = renderAs === "Somewhere Safe to Go"
-        ? (subtype ? checkedVals.includes(slug(subtype)) : false)
-        : (subtype != null && checkedVals.includes(slug(subtype)));
+    allMarkers.forEach(({ marker, catEntries, zones }) => {
+      const valsFor = renderAs => {
+        if (renderAs === "Someone to Respond")   return stcVals;
+        if (renderAs === "Outreach/Engage")      return oeVals;
+        if (renderAs === "Somewhere Safe to Go") return ptgVals;
+        if (renderAs === "Post-Crisis")          return pccVals;
+        return [];
+      };
+      // Visible if ANY of this dot's categories has its subtype checked
+      const subtypeOk = catEntries.some(({ renderAs, subtype }) => {
+        const vals = valsFor(renderAs);
+        return renderAs === "Somewhere Safe to Go"
+          ? (subtype ? vals.includes(slug(subtype)) : false)
+          : (subtype != null && vals.includes(slug(subtype)));
+      });
       const zoneOk = zoneMatch(zones, zone);
 
       if (subtypeOk && zoneOk) {
