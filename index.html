@@ -408,12 +408,40 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     locGroups.get(key).push(entry);
   });
 
-  let spiderfied = null; // { key, origLat, origLng, entries, lines, rings }
+  // Outer ring on collapsed stacked dots — signals "click to expand"
+  const stackRings = new Map();
+  locGroups.forEach((entries, key) => {
+    if (entries.length <= 1) return;
+    const ll = entries[0].marker.getLatLng();
+    stackRings.set(key, L.circleMarker([ll.lat, ll.lng], {
+      pane: 'dots', radius: 10,
+      color: '#333', weight: 2, fill: false, opacity: 0.85,
+      interactive: false
+    }));
+  });
+
+  function updateStackRings() {
+    stackRings.forEach((ring, key) => {
+      // Hide ring while that stack is fanned out
+      if (spiderfied && spiderfied.key === key) {
+        if (map.hasLayer(ring)) ring.remove();
+        return;
+      }
+      const visCount = (locGroups.get(key) || [])
+        .filter(e => map.hasLayer(e.marker)).length;
+      if (visCount >= 2) {
+        if (!map.hasLayer(ring)) ring.addTo(map);
+      } else {
+        if (map.hasLayer(ring)) ring.remove();
+      }
+    });
+  }
+
+  let spiderfied = null; // { key, origLat, origLng, entries, lines }
 
   function unspiderfy() {
     if (!spiderfied) return;
     spiderfied.lines.forEach(l => l.remove());
-    spiderfied.rings.forEach(r => r.remove());
     spiderfied.entries.forEach(e =>
       e.marker.setLatLng([spiderfied.origLat, spiderfied.origLng]));
     spiderfied = null;
@@ -430,31 +458,23 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     const R       = 0.00035; // ~30 m radius in degrees
     const cosLat  = Math.cos(origLat * Math.PI / 180);
     const lines   = [];
-    const rings   = [];
 
     visible.forEach((e, i) => {
       const angle  = (2 * Math.PI * i / n) - Math.PI / 2;
       const newLat = origLat + R * Math.sin(angle);
       const newLng = origLng + R * Math.cos(angle) / cosLat;
       e.marker.setLatLng([newLat, newLng]);
-
-      // Spoke line from original location to fanned dot
       lines.push(L.polyline([[origLat, origLng], [newLat, newLng]], {
         color: '#888', weight: 1.5, opacity: 0.7,
         dashArray: '4,3', interactive: false
       }).addTo(map));
-
-      // Outer ring for double-border effect
-      const dotColor = e.marker.options.fillColor === '#ffffff'
-        ? e.marker.options.color       // hollow dot — use stroke color
-        : e.marker.options.fillColor;  // solid dot  — use fill color
-      rings.push(L.circleMarker([newLat, newLng], {
-        pane: 'dots', radius: 10, color: dotColor,
-        weight: 2, fill: false, opacity: 1, interactive: false
-      }).addTo(map));
     });
 
-    spiderfied = { key, origLat, origLng, entries: visible, lines, rings };
+    // Hide the stack ring while fanned
+    const sr = stackRings.get(key);
+    if (sr && map.hasLayer(sr)) sr.remove();
+
+    spiderfied = { key, origLat, origLng, entries: visible, lines };
   }
 
   // Wire click handlers for stacked locations
@@ -472,7 +492,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     }
   });
 
-  map.on('click', unspiderfy);
+  map.on('click', () => { unspiderfy(); updateStackRings(); });
 
   // ── Filter logic ─────────────────────────────────────────────────────────
   function getChecked(attr) {
@@ -514,6 +534,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
       }
     });
 
+    updateStackRings();
     updateZonePolygons(zone);
   }
 
