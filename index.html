@@ -408,10 +408,12 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     locGroups.get(key).push(entry);
   });
 
-  let spiderfied = null; // { key, origLat, origLng, entries }
+  let spiderfied = null; // { key, origLat, origLng, entries, lines, rings }
 
   function unspiderfy() {
     if (!spiderfied) return;
+    spiderfied.lines.forEach(l => l.remove());
+    spiderfied.rings.forEach(r => r.remove());
     spiderfied.entries.forEach(e =>
       e.marker.setLatLng([spiderfied.origLat, spiderfied.origLng]));
     spiderfied = null;
@@ -427,14 +429,32 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     const n       = visible.length;
     const R       = 0.00035; // ~30 m radius in degrees
     const cosLat  = Math.cos(origLat * Math.PI / 180);
+    const lines   = [];
+    const rings   = [];
+
     visible.forEach((e, i) => {
-      const angle = (2 * Math.PI * i / n) - Math.PI / 2;
-      e.marker.setLatLng([
-        origLat + R * Math.sin(angle),
-        origLng + R * Math.cos(angle) / cosLat
-      ]);
+      const angle  = (2 * Math.PI * i / n) - Math.PI / 2;
+      const newLat = origLat + R * Math.sin(angle);
+      const newLng = origLng + R * Math.cos(angle) / cosLat;
+      e.marker.setLatLng([newLat, newLng]);
+
+      // Spoke line from original location to fanned dot
+      lines.push(L.polyline([[origLat, origLng], [newLat, newLng]], {
+        color: '#888', weight: 1.5, opacity: 0.7,
+        dashArray: '4,3', interactive: false
+      }).addTo(map));
+
+      // Outer ring for double-border effect
+      const dotColor = e.marker.options.fillColor === '#ffffff'
+        ? e.marker.options.color       // hollow dot — use stroke color
+        : e.marker.options.fillColor;  // solid dot  — use fill color
+      rings.push(L.circleMarker([newLat, newLng], {
+        pane: 'dots', radius: 10, color: dotColor,
+        weight: 2, fill: false, opacity: 1, interactive: false
+      }).addTo(map));
     });
-    spiderfied = { key, origLat, origLng, entries: visible };
+
+    spiderfied = { key, origLat, origLng, entries: visible, lines, rings };
   }
 
   // Wire click handlers for stacked locations
