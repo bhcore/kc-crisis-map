@@ -123,13 +123,9 @@ function makePopup(p) {
     <hr style="margin:5px 0">
     ${row("Type",        p.type)}
     ${row("Population",  p.population)}
-    ${row("Year started",p.rc_year_start)}
     ${row("Serves",      serves)}
-    ${nn(p.rc_annual_calls)
-      ? `<div style="font-size:11px"><b>Annual calls:</b> ~${esc(p.rc_annual_calls)}</div>` : ""}
     ${row("How to refer",  p.how_accessed)}
     ${row("Refers to",     p.refers_to)}
-    ${row("ZIP codes served", p.rc_zips)}
     ${row("Address",       p.address)}
     ${nn(p.website)
       ? `<div style="font-size:11px"><a href="${esc(p.website)}" target="_blank" rel="noopener">Website</a></div>` : ""}
