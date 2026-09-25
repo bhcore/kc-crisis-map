@@ -234,7 +234,11 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Crisis Stabilization"
+    "ptg_subtypes": [
+      "Crisis Stabilization",
+      "Evaluation & Treatment",
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -253,7 +257,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Other"
+    "ptg_subtypes": [
+      "Other"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -272,7 +278,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Crisis Stabilization"
+    "ptg_subtypes": [
+      "Crisis Stabilization"
+    ]
   },
   {
     "category": "Someone to Respond",
@@ -310,7 +318,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Crisis Stabilization"
+    "ptg_subtypes": [
+      "Crisis Stabilization"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -444,7 +454,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -463,7 +475,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -482,7 +496,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment"
+    ]
   },
   {
     "category": "Outreach/Engage",
@@ -520,7 +536,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Inpatient Psychiatry"
+    "ptg_subtypes": [
+      "Inpatient Psychiatry"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -539,7 +557,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -558,7 +578,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -744,7 +766,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Outreach/Engage",
@@ -862,7 +886,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -881,7 +907,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -900,7 +928,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -938,7 +968,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Inpatient Psychiatry"
+    "ptg_subtypes": [
+      "Inpatient Psychiatry"
+    ]
   },
   {
     "category": "Someone to Respond",
@@ -976,7 +1008,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Inpatient Psychiatry"
+    "ptg_subtypes": [
+      "Inpatient Psychiatry"
+    ]
   },
   {
     "category": "Someone to Respond",
@@ -1014,7 +1048,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1033,7 +1069,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1052,7 +1090,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -1128,7 +1168,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment"
+    ]
   },
   {
     "category": "Outreach/Engage",
@@ -1296,7 +1338,10 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment",
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1315,7 +1360,10 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management",
+      "Inpatient Psychiatry"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -1482,7 +1530,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1501,7 +1551,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Other"
+    "ptg_subtypes": [
+      "Other"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1520,7 +1572,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Inpatient Psychiatry"
+    "ptg_subtypes": [
+      "Inpatient Psychiatry"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -1643,7 +1697,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1662,7 +1718,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Someone to Respond",
@@ -1767,7 +1825,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1786,7 +1846,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1805,7 +1867,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1824,7 +1888,10 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment",
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1843,7 +1910,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1862,7 +1931,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1881,7 +1952,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1900,7 +1973,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Withdrawal Management"
+    "ptg_subtypes": [
+      "Withdrawal Management"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1919,7 +1994,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1938,7 +2015,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Evaluation & Treatment"
+    "ptg_subtypes": [
+      "Evaluation & Treatment"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1957,7 +2036,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Crisis Stabilization"
+    "ptg_subtypes": [
+      "Crisis Stabilization"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -2014,7 +2095,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -2033,7 +2116,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Inpatient Psychiatry"
+    "ptg_subtypes": [
+      "Inpatient Psychiatry"
+    ]
   },
   {
     "category": "Somewhere Safe to Go",
@@ -2052,7 +2137,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Outreach/Engage",
@@ -2109,7 +2196,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Post-Crisis",
@@ -2172,7 +2261,9 @@
       "Countywide"
     ],
     "dot_style": "solid",
-    "ptg_subtype": "Emergency Department"
+    "ptg_subtypes": [
+      "Emergency Department"
+    ]
   },
   {
     "category": "Post-Crisis",

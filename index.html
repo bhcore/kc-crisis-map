@@ -251,8 +251,9 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
       const zones = Array.isArray(p.zones) ? p.zones : (p.zones ? [p.zones] : ["Countywide"]);
       const solid = true;
 
-      const addMarker = (renderAs, subtype) => {
-        if (!subtype && renderAs !== "Somewhere Safe to Go") return;
+      // subtypes is always an array; StG may have multiple entries
+      const addMarker = (renderAs, subtypes) => {
+        if (!subtypes?.length && renderAs !== "Somewhere Safe to Go") return;
         const col = CAT_COLORS[renderAs] || "#888";
         const m = L.circleMarker([p.lat, p.lon], {
           pane:        "dots",
@@ -265,22 +266,22 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
         })
         .bindPopup(makePopup(p))
         .bindTooltip(`<b>${esc(p.program)}</b>`);
-        allMarkers.push({ marker: m, renderAs, subtype, zones });
+        allMarkers.push({ marker: m, renderAs, subtypes, zones });
       };
 
       const cat = p.category;
 
       if (cat === "Post-Crisis" && p.type === "FD MIH/CARES") {
-        addMarker("Post-Crisis",        p.pcc_subtype);
-        addMarker("Someone to Respond", p.stc_subtype);
+        addMarker("Post-Crisis",        [p.pcc_subtype]);
+        addMarker("Someone to Respond", [p.stc_subtype]);
       } else if (cat === "Someone to Respond") {
-        addMarker(cat, p.stc_subtype);
+        addMarker(cat, [p.stc_subtype]);
       } else if (cat === "Outreach/Engage") {
-        addMarker(cat, p.oe_subtype);
+        addMarker(cat, [p.oe_subtype]);
       } else if (cat === "Somewhere Safe to Go") {
-        addMarker(cat, p.ptg_subtype);
+        addMarker(cat, p.ptg_subtypes || []);
       } else if (cat === "Post-Crisis") {
-        addMarker(cat, p.pcc_subtype);
+        addMarker(cat, [p.pcc_subtype]);
       }
     });
 
@@ -517,7 +518,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     const ptgVals  = getChecked("kcptg");
     const pccVals  = getChecked("kcpcc");
 
-    allMarkers.forEach(({ marker, renderAs, subtype, zones }) => {
+    allMarkers.forEach(({ marker, renderAs, subtypes, zones }) => {
       let checkedVals;
       if      (renderAs === "Someone to Respond")   checkedVals = stcVals;
       else if (renderAs === "Outreach/Engage")      checkedVals = oeVals;
@@ -525,9 +526,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
       else if (renderAs === "Post-Crisis")          checkedVals = pccVals;
       else    checkedVals = [];
 
-      const subtypeOk = renderAs === "Somewhere Safe to Go"
-        ? (subtype ? checkedVals.includes(slug(subtype)) : false)
-        : (subtype != null && checkedVals.includes(slug(subtype)));
+      const subtypeOk = (subtypes || []).some(s => s != null && checkedVals.includes(slug(s)));
       const zoneOk = zoneMatch(zones, zone);
 
       if (subtypeOk && zoneOk) {
