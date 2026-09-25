@@ -368,8 +368,7 @@
     ],
     "dot_style": "solid",
     "stc_subtype": "Mobile Rapid Response Crisis Team (MRRCT)",
-    "rc_year_start": "2024",
-    "rc_serves": "Seattle (HQ location; service area not reported)"
+    "rc_year_start": "2024"
   },
   {
     "category": "Someone to Respond",
@@ -1320,11 +1319,11 @@
   },
   {
     "category": "Post-Crisis",
-    "program": "Redmond Fire MIH",
+    "program": "Redmond Fire Department MIH",
     "parent_org": "Redmond Fire Department",
     "type": "FD MIH/CARES",
     "population": "Adult & Youth",
-    "geographic_area": "Redmond, Fall City, Snoqualmie, Union Hill/Redmond Ridge area",
+    "geographic_area": "Redmond, Fall City, Snoqualmie, Duvall, Union Hill/Redmond Ridge area",
     "how_accessed": "First Responder referral; other MIH/CARES programs if within catchment",
     "refers_to": "Primary care/Medical care, social support, community programs\n\nVA services, SUD treatment/Recovery services, BH care/counseling (Sound Mental Health in Redmond (walk-in), Fairfax); Shoreline MIH; Redmond PD for SUD or BH",
     "address": "8450 161st Ave NE Redmond, WA 98052",
@@ -1360,29 +1359,6 @@
     "rc_annual_calls": 750,
     "rc_serves": "Redmond",
     "rc_zips": "98052"
-  },
-  {
-    "category": "Someone to Respond",
-    "program": "Regional Crisis Response (RCR) Agency",
-    "parent_org": "City Councils: Bothell, Kenmore, Kirkland, Lake Forest Park, and Shoreline",
-    "type": "Law Enforcement Co-Response",
-    "population": "Adult & Youth",
-    "geographic_area": "Bothell, Kenmore, Kirkland, Lake Forest Park, and Shoreline",
-    "how_accessed": "911, First Responder referral, Self-dispatch",
-    "refers_to": "Shoreline Fire MIH, Kirkland Fire Department, Kirkland Fire MIH, CCCs, DCR, Emergency Department, Community Resources, BH care/counseling, Social Services, Primary care/Medical care",
-    "address": "17500 Midvale Ave N Shoreline, WA 98133-4905| \n\n123 5th Ave Kirkland, Washington 98033 | \n\n18415 101st Avenue NE Bothell, WA 98011 | \n\n18120 68th Ave NE Kenmore, WA 98028 | \n\n17425 Ballinger Way NE Lake Forest Park, WA 98155",
-    "website": "https://www.shorelinewa.gov/government/departments/police-department/radar\n\nhttps://www.kirklandwa.gov/Government/City-Managers-Office/The-Regional-Crisis-Response-Agency\n\nhttps://www.bothellwa.gov/1795/Regional-Crisis-Response-Agency\n\nhttps://cityoflfp.gov/622/Regional-Crisis-Response-Agency",
-    "lat": 47.7562,
-    "lon": -122.3436,
-    "zones": [
-      "North"
-    ],
-    "dot_style": "solid",
-    "stc_subtype": "LE co-response",
-    "rc_year_start": "2016",
-    "rc_annual_calls": 2000,
-    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
-    "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
   },
   {
     "category": "Outreach/Engage",
@@ -1613,7 +1589,7 @@
   },
   {
     "category": "Post-Crisis",
-    "program": "Shoreline Fire MIH",
+    "program": "Shoreline Fire Department MIH",
     "parent_org": "Shoreline Fire Department",
     "type": "FD MIH/CARES",
     "population": "Adult & Youth",
@@ -1627,11 +1603,9 @@
     "zones": [
       "North"
     ],
-    "dot_style": "hollow",
+    "dot_style": "solid",
     "stc_subtype": "Fire/EMS co-response",
-    "pcc_subtype": "Fire-Based / MIH",
-    "rc_year_start": "",
-    "rc_serves": "Shoreline (HQ location; service area not reported)"
+    "pcc_subtype": "Fire-Based / MIH"
   },
   {
     "category": "Someone to Respond",
@@ -1677,7 +1651,7 @@
     "parent_org": "Public Health - Seattle & King County / Pioneer Human Services",
     "type": "Sobering services",
     "population": "Adult",
-    "geographic_area": "Seattle",
+    "geographic_area": "Countywide",
     "how_accessed": "Walk-in, Self-referral, ESP Referral, Hospital Referral, First Responder Referral, family/friends (5:00 PM – 7:00 AM for sobering services)",
     "refers_to": "Withdrawal Management, SUD treatment/Recovery services, BH care/counseling, Case Management, House Resources, Primary care/Medical care, Community Resources",
     "address": "500 4th Avenue Seattle, WA 98104",
@@ -1685,7 +1659,7 @@
     "lat": 47.6031,
     "lon": -122.3294,
     "zones": [
-      "Central"
+      "Countywide"
     ],
     "dot_style": "solid",
     "ptg_subtype": "Withdrawal Management"
@@ -1758,7 +1732,7 @@
   },
   {
     "category": "Post-Crisis",
-    "program": "South King Fire MIH/CARES",
+    "program": "South King Fire & Rescue MIH",
     "parent_org": "South King Fire & Rescue",
     "type": "FD MIH/CARES",
     "population": "Adult & Youth",
@@ -1774,11 +1748,7 @@
     ],
     "dot_style": "solid",
     "stc_subtype": "Fire/EMS co-response",
-    "pcc_subtype": "Fire-Based / MIH",
-    "rc_year_start": "2024",
-    "rc_annual_calls": 44,
-    "rc_serves": "Des Moines, Federal Way, King County",
-    "rc_zips": "98001, 98003, 98023, 98148, 98198"
+    "pcc_subtype": "Fire-Based / MIH"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -2167,7 +2137,7 @@
   },
   {
     "category": "Post-Crisis",
-    "program": "Vashon MIH/CARES",
+    "program": "Vashon Island Fire & Rescue MIH",
     "parent_org": "Vashon Island Fire & Rescue",
     "type": "FD MIH/CARES",
     "population": "Adult & Youth",
@@ -2183,11 +2153,7 @@
     ],
     "dot_style": "solid",
     "stc_subtype": "Fire/EMS co-response",
-    "pcc_subtype": "Fire-Based / MIH",
-    "rc_year_start": "2024",
-    "rc_annual_calls": 1600,
-    "rc_serves": "Vashon",
-    "rc_zips": "98070"
+    "pcc_subtype": "Fire-Based / MIH"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -2226,6 +2192,25 @@
     ],
     "dot_style": "solid",
     "pcc_subtype": "Community Stabilization"
+  },
+  {
+    "category": "Outreach/Engage",
+    "program": "We Deliver Care",
+    "parent_org": "We Deliver Care",
+    "type": "Outreach",
+    "population": "Adult",
+    "geographic_area": "Seattle",
+    "how_accessed": "Outreach",
+    "refers_to": null,
+    "address": "3rd Avenue & Pine Street, Seattle, WA 98101",
+    "website": "https://wedelivercare.net/",
+    "lat": 47.6107,
+    "lon": -122.3387,
+    "zones": [
+      "Central"
+    ],
+    "dot_style": "solid",
+    "oe_subtype": "Outreach"
   },
   {
     "category": "Someone to Respond",
