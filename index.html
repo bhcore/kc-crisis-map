@@ -253,7 +253,7 @@ function initMap(programs, zonesGeo, psapGeo, legGeo, fireGeo) {
     .filter(p => p.lat != null && p.lon != null)
     .forEach(p => {
       const zones = Array.isArray(p.zones) ? p.zones : (p.zones ? [p.zones] : ["Countywide"]);
-      const solid = p.dot_style !== "hollow";
+      const solid = true;
 
       const addMarker = (renderAs, subtype) => {
         if (!subtype && renderAs !== "Somewhere Safe to Go") return;
