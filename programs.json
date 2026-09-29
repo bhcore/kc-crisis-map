@@ -19,7 +19,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2023",
     "rc_annual_calls": 3044,
-    "rc_serves": "Bellevue",
     "rc_zips": "98004, 98006, 98007, 98008, 98805"
   },
   {
@@ -43,7 +42,6 @@
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2012",
     "rc_annual_calls": 1644,
-    "rc_serves": "Beaux Arts Village, Bellevue, Clyde Hill, Hunts Point, Medina, Newcastle, Yarrow Point",
     "rc_zips": "98004, 98005, 98006, 98007, 98008, 98039, 98056, 98059"
   },
   {
@@ -700,7 +698,6 @@
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2023",
     "rc_annual_calls": 450,
-    "rc_serves": "Burien, Normandy Park, White Center",
     "rc_zips": "98106, 98108, 98126, 98146, 98148, 98166, 98168, 98198"
   },
   {
@@ -759,8 +756,7 @@
     ],
     "dot_style": "solid",
     "stc_subtype": "LE co-response",
-    "rc_year_start": "2016",
-    "rc_serves": "King County, Pierce County, Snohomish County"
+    "rc_year_start": "2016"
   },
   {
     "category": "Outreach/Engage",
@@ -822,7 +818,6 @@
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2023",
     "rc_annual_calls": 1500,
-    "rc_serves": "Kirkland",
     "rc_zips": "98033, 98034"
   },
   {
@@ -962,8 +957,7 @@
     "dot_style": "solid",
     "stc_subtype": "Mobile Response and Stabilization Services (MRSS)",
     "rc_year_start": "2010 or earlier",
-    "rc_annual_calls": 1000,
-    "rc_serves": "King County"
+    "rc_annual_calls": 1000
   },
   {
     "category": "Someone to Respond",
@@ -1326,7 +1320,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2021",
     "rc_annual_calls": 450,
-    "rc_serves": "Port of Seattle properties only (port/airport facilities within SeaTac, Seattle, Auburn, Burien, Des Moines) — does not provide general crisis response to residents of those cities",
     "rc_zips": "98148, 98158, 98168, 98188"
   },
   {
@@ -1351,7 +1344,6 @@
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2014",
     "rc_annual_calls": 2800,
-    "rc_serves": "Bryn Mawr-Skyway, Covington, Enumclaw, Kent, Maple Valley, Renton, SeaTac, Tukwila",
     "rc_zips": "98022, 98030, 98032, 98038, 98042, 98055, 98056, 98058, 98059, 98168, 98178, 98188, 98198"
   },
   {
@@ -1558,7 +1550,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2017",
     "rc_annual_calls": 750,
-    "rc_serves": "Redmond",
     "rc_zips": "98052"
   },
   {
@@ -1581,7 +1572,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2016",
     "rc_annual_calls": 2000,
-    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
     "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
   },
   {
@@ -1604,7 +1594,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2016",
     "rc_annual_calls": 2000,
-    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
     "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
   },
   {
@@ -1627,7 +1616,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2016",
     "rc_annual_calls": 2000,
-    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
     "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
   },
   {
@@ -1650,7 +1638,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2016",
     "rc_annual_calls": 2000,
-    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
     "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
   },
   {
@@ -1673,7 +1660,6 @@
     "stc_subtype": "LE co-response",
     "rc_year_start": "2016",
     "rc_annual_calls": 2000,
-    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
     "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
   },
   {
@@ -1774,7 +1760,6 @@
     "oe_subtype": "City-Based Outreach",
     "rc_year_start": "2023",
     "rc_annual_calls": 3000,
-    "rc_serves": "Seattle",
     "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98112, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98125, 98126, 98129, 98131, 98133, 98134, 98136, 98144, 98146, 98148, 98154, 98155, 98158, 98161, 98164, 98166, 98168, 98170, 98174, 98177, 98178, 98181, 98185, 98188, 98190, 98191, 98195, 98198, 98199"
   },
   {
@@ -1797,7 +1782,6 @@
     "stc_subtype": "Alternative/community",
     "rc_year_start": "2023",
     "rc_annual_calls": 3000,
-    "rc_serves": "Seattle",
     "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98112, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98125, 98126, 98129, 98131, 98133, 98134, 98136, 98144, 98146, 98148, 98154, 98155, 98158, 98161, 98164, 98166, 98168, 98170, 98174, 98177, 98178, 98181, 98185, 98188, 98190, 98191, 98195, 98198, 98199"
   },
   {
@@ -1903,7 +1887,6 @@
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2019",
     "rc_annual_calls": 2500,
-    "rc_serves": "Seattle",
     "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98110, 98111, 98112, 98114, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98124, 98125, 98126, 98131, 98132, 98133, 98134, 98136, 98138, 98144, 98145, 98146, 98148, 98154, 98155, 98158, 98160, 98161, 98164, 98166, 98168, 98171, 98174, 98177, 98178, 98188, 98198, 98199"
   },
   {
@@ -1944,7 +1927,6 @@
     "dot_style": "solid",
     "stc_subtype": "LE co-response",
     "rc_annual_calls": 1500,
-    "rc_serves": "Seattle",
     "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98112, 98113, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98125, 98126, 98133, 98134, 98136, 98141, 98144, 98146, 98154, 98161, 98165, 98170, 98174, 98175, 98177, 98178, 98181, 98185, 98190, 98191, 98194, 98199"
   },
   {
@@ -2087,7 +2069,6 @@
     "stc_subtype": "Mobile Rapid Response Crisis Team (MRRCT)",
     "rc_year_start": "2024",
     "rc_annual_calls": 2689,
-    "rc_serves": "King County",
     "rc_zips": "98102, 98103, 98105, 98106, 98107, 98108, 98109, 98112, 98115, 98116, 98117, 98118, 98119, 98122, 98125, 98126, 98133, 98134, 98136, 98144, 98146, 98177, 98178, 98199"
   },
   {
@@ -2110,7 +2091,6 @@
     "stc_subtype": "Mobile Rapid Response Crisis Team (MRRCT)",
     "rc_year_start": "2024",
     "rc_annual_calls": 2689,
-    "rc_serves": "King County",
     "rc_zips": "98102, 98103, 98105, 98106, 98107, 98108, 98109, 98112, 98115, 98116, 98117, 98118, 98119, 98122, 98125, 98126, 98133, 98134, 98136, 98144, 98146, 98177, 98178, 98199"
   },
   {
@@ -2603,7 +2583,6 @@
     "pcc_subtype": "Fire-Based / MIH",
     "rc_year_start": "2016",
     "rc_annual_calls": 565,
-    "rc_serves": "Algona, Auburn, Black Diamond (partial), Pacific",
     "rc_zips": "98001, 98002, 98010, 98047, 98092"
   },
   {

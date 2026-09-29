@@ -155,7 +155,7 @@ row_to_obj <- function(r, include_map_fields = TRUE) {
     obj$pcc_subtype <- if (nn(r$pcc_subtype))          r$pcc_subtype    else NULL
     obj$rc_year_start   <- if (!is.na(r$rc_year_start))   r$rc_year_start   else NULL
     obj$rc_annual_calls <- if (!is.na(r$rc_annual_calls)) r$rc_annual_calls else NULL
-    obj$rc_serves   <- if (nn(r$rc_serves))            r$rc_serves      else NULL
+    obj$rc_serves   <- if (!nn(r$geographic_area) && nn(r$rc_serves)) r$rc_serves else NULL
     obj$rc_zips     <- if (nn(r$rc_zips))              r$rc_zips        else NULL
   }
   obj
