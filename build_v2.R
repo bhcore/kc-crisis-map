@@ -49,7 +49,7 @@ classify_ptg_all <- function(type) {
   if (grepl("Emergency Department",                     type, ignore.case=TRUE)) types <- c(types, "Emergency Department")
   if (grepl("Crisis Care|Crisis Stabiliz|Not open yet", type, ignore.case=TRUE)) types <- c(types, "Crisis Stabilization")
   if (grepl("E&T|Evaluation",                           type, ignore.case=TRUE)) types <- c(types, "Evaluation & Treatment")
-  if (grepl("Withdrawal|\\bWM\\b|Sobering|SWMS",        type, ignore.case=TRUE)) types <- c(types, "Withdrawal Management")
+  if (grepl("Withdrawal|\\bWM\\b|SWMS",                 type, ignore.case=TRUE)) types <- c(types, "Withdrawal Management")
   if (grepl("Inpatient",                                type, ignore.case=TRUE)) types <- c(types, "Inpatient Psychiatry")
   if (length(types) == 0) types <- "Other"
   types

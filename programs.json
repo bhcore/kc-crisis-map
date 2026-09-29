@@ -1805,7 +1805,7 @@
     "program": "Seattle Children's ED",
     "parent_org": "Seattle Children's Hospital",
     "type": "Emergency Department",
-    "population": "All",
+    "population": "Youth",
     "geographic_area": "Countywide",
     "how_accessed": "First Responder Referral, Self-referral, Walk-in, Community Provider Referral",
     "refers_to": "Inpatient Care (Medical and/or Psychiatric), Youth CCC (future), DCR",
@@ -2063,7 +2063,7 @@
     ],
     "dot_style": "solid",
     "ptg_subtypes": [
-      "Withdrawal Management"
+      "Other"
     ]
   },
   {
@@ -2386,7 +2386,7 @@
     "category": "Somewhere Safe to Go",
     "program": "Thunderbird Treatment Center",
     "parent_org": "Seattle Indian Health Board",
-    "type": "Not open yet",
+    "type": "Withdrawal Management",
     "population": "Adult",
     "geographic_area": "Countywide",
     "how_accessed": "Referral, Self-referral/Walk-in",
@@ -2400,7 +2400,7 @@
     ],
     "dot_style": "solid",
     "ptg_subtypes": [
-      "Crisis Stabilization"
+      "Withdrawal Management"
     ]
   },
   {
