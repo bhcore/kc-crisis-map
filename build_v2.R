@@ -29,6 +29,7 @@ LAYER_DIR   <- file.path(V2_DIR, "layers")
 # ── Subtype classifiers (mirrors build_kc_map.R) ─────────────────────────────
 classify_stc <- function(pt) dplyr::case_when(
   grepl("^Law",                          pt, ignore.case=TRUE) ~ "LE co-response",
+  grepl("^Fire/EMS$",                    pt, ignore.case=TRUE) ~ "Fire/EMS",
   grepl("^Fire",                         pt, ignore.case=TRUE) ~ "Fire/EMS co-response",
   grepl("^Alternative|City.based civil", pt, ignore.case=TRUE) ~ "Alternative/community",
   grepl("Crisis evaluation|^Designated", pt, ignore.case=TRUE) ~ "Designated Crisis Responder (DCR)",
@@ -38,18 +39,21 @@ classify_stc <- function(pt) dplyr::case_when(
 )
 classify_oe <- function(type, program) dplyr::case_when(
   grepl("City.Based", type, ignore.case=TRUE) |
-    grepl("City Outreach Team", program, ignore.case=TRUE) ~ "City-Based Outreach",
+    grepl("City Outreach Team", program, ignore.case=TRUE) |
+    program %in% c("Seattle CARE", "Unified Care Team") ~ "City-Based Outreach",
   grepl("Outreach|Civilian", type, ignore.case=TRUE) ~ "Outreach",
   TRUE ~ "Other"
 )
-classify_ptg <- function(type) dplyr::case_when(
-  grepl("Emergency Department",                   type, ignore.case=TRUE) ~ "Emergency Department",
-  grepl("Crisis Care|Crisis Stabiliz|Not open yet", type, ignore.case=TRUE) ~ "Crisis Stabilization",
-  grepl("E&T|SWMS|Evaluation",                    type, ignore.case=TRUE) ~ "Evaluation & Treatment",
-  grepl("Withdrawal|\\bWM\\b|Sobering",           type, ignore.case=TRUE) ~ "Withdrawal Management",
-  grepl("Inpatient",                              type, ignore.case=TRUE) ~ "Inpatient Psychiatry",
-  TRUE ~ "Other"
-)
+classify_ptg_all <- function(type) {
+  types <- character(0)
+  if (grepl("Emergency Department",                     type, ignore.case=TRUE)) types <- c(types, "Emergency Department")
+  if (grepl("Crisis Care|Crisis Stabiliz|Not open yet", type, ignore.case=TRUE)) types <- c(types, "Crisis Stabilization")
+  if (grepl("E&T|Evaluation",                           type, ignore.case=TRUE)) types <- c(types, "Evaluation & Treatment")
+  if (grepl("Withdrawal|\\bWM\\b|Sobering|SWMS",        type, ignore.case=TRUE)) types <- c(types, "Withdrawal Management")
+  if (grepl("Inpatient",                                type, ignore.case=TRUE)) types <- c(types, "Inpatient Psychiatry")
+  if (length(types) == 0) types <- "Other"
+  types
+}
 classify_pcc <- function(type) dplyr::case_when(
   grepl("Fire.Based|Integrated Health|\\bMIH\\b|FD MIH", type, ignore.case=TRUE) ~ "Fire-Based / MIH",
   grepl("Post.Crisis Follow",                     type, ignore.case=TRUE) ~ "Post-Crisis Follow-Up",
@@ -115,7 +119,10 @@ base_df <- kcs_enriched |>
     stc_subtype = ifelse(category == "Someone to Respond",   classify_stc(type),         NA_character_),
     stc_subtype = ifelse(type == "FD MIH/CARES",            "Fire/EMS co-response",      stc_subtype),
     oe_subtype  = ifelse(category == "Outreach/Engage",      classify_oe(type, program),  NA_character_),
-    ptg_subtype = ifelse(category == "Somewhere Safe to Go", classify_ptg(type),          NA_character_),
+    ptg_subtypes = mapply(
+      function(cat, tp) if (!is.na(cat) && cat == "Somewhere Safe to Go" && !is.na(tp))
+                          classify_ptg_all(tp) else character(0),
+      category, type, SIMPLIFY = FALSE),
     pcc_subtype = ifelse(category == "Post-Crisis",          classify_pcc(type),          NA_character_)
   )
 
@@ -144,7 +151,7 @@ row_to_obj <- function(r, include_map_fields = TRUE) {
     obj$dot_style   <- if (nn(r$dot_style))            r$dot_style      else "solid"
     obj$stc_subtype <- if (nn(r$stc_subtype))          r$stc_subtype    else NULL
     obj$oe_subtype  <- if (nn(r$oe_subtype))           r$oe_subtype     else NULL
-    obj$ptg_subtype <- if (nn(r$ptg_subtype))          r$ptg_subtype    else NULL
+    obj$ptg_subtypes <- if (length(r$ptg_subtypes[[1]]) > 0) as.list(r$ptg_subtypes[[1]]) else NULL
     obj$pcc_subtype <- if (nn(r$pcc_subtype))          r$pcc_subtype    else NULL
     obj$rc_year_start   <- if (!is.na(r$rc_year_start))   r$rc_year_start   else NULL
     obj$rc_annual_calls <- if (!is.na(r$rc_annual_calls)) r$rc_annual_calls else NULL

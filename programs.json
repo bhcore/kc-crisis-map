@@ -48,6 +48,64 @@
   },
   {
     "category": "Someone to Respond",
+    "program": "Bellevue Fire Department",
+    "parent_org": "Bellevue Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Bellevue, Clyde Hill, Hunts Point, Medina, Newcastle, Yarrow Point",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Bellevue Fire CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "450 110th AVE NE, Bellevue, WA 98009",
+    "website": "https://bellevuewa.gov/city-government/departments/fire",
+    "lat": 47.6144,
+    "lon": -122.1922,
+    "zones": [
+      "East"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Bothell Fire Department",
+    "parent_org": "Bothell Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Bothell",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Shoreline Fire MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "10726 Beardslee Boulevard Bothell, WA 98011",
+    "website": "https://bothellwa.gov/415/Fire-Department",
+    "lat": 47.7989,
+    "lon": -122.2006,
+    "zones": [
+      "North"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Burien Fire Department (King County Fire District #2)",
+    "parent_org": "Burien Fire Department (King County Fire District #2)",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Burien, Normandy Park, North Highline, White Center",
+    "how_accessed": "King 2 CARES (CARES Car), 911, First Responder referral, Self-dispatch",
+    "refers_to": "King 2 CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "900 SW 146th St. Burien, WA 98166",
+    "website": "https://www.burienfire.org/",
+    "lat": 47.4727,
+    "lon": -122.3456,
+    "zones": [
+      "Central",
+      "South"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
+    "category": "Someone to Respond",
     "program": "Burien Police Department TRU",
     "parent_org": "City of Burien, Sound Health & KCSO",
     "type": "Law Enforcement Co-Response",
@@ -400,6 +458,25 @@
     "stc_subtype": "Designated Crisis Responder (DCR)"
   },
   {
+    "category": "Someone to Respond",
+    "program": "Eastside Fire & Rescue",
+    "parent_org": "Eastside Fire & Rescue",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Carnation, Issaquah/Prestion area, Mercer Island, North Bend, Sammamish, Woodinville",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Puget Sound FD CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "175 Newport Way NW, Issaquah, WA 98027",
+    "website": "https://www.eastsidefire-rescue.org/",
+    "lat": 47.5322,
+    "lon": -122.044,
+    "zones": [
+      "East"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
     "category": "Outreach/Engage",
     "program": "Emergency Services Patrol (ESP)",
     "parent_org": "DCHS/BHRD",
@@ -499,6 +576,25 @@
     "ptg_subtypes": [
       "Evaluation & Treatment"
     ]
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Fall City Fire Department",
+    "parent_org": "Fall City Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Fall City",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Redmond Fire MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "4301 334th Place SE, Fall City, WA 98024",
+    "website": "https://www.king27fire.com/",
+    "lat": 47.5289,
+    "lon": -121.8878,
+    "zones": [
+      "East"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Outreach/Engage",
@@ -651,7 +747,7 @@
     "parent_org": "King County Sheriff's Office (KCSO)",
     "type": "Law Enforcement Co-Response",
     "population": "Adult & Youth",
-    "geographic_area": "Unincorporated areas in King County",
+    "geographic_area": "King County contract cities and unincorporated King County",
     "how_accessed": "911, First Responder referral, Self-dispatch",
     "refers_to": "Regional Fire MIH/CARES, CCCs, DCR, Emergency Department, \"Service referrals, and support for treatment processes\"",
     "address": "516 Third Avenue, Room W-116, Seattle, WA 98104",
@@ -685,6 +781,25 @@
     ],
     "dot_style": "solid",
     "oe_subtype": "Outreach"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Kirkland Fire Department",
+    "parent_org": "Kirkland Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Kirkland",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Kirkland Fire MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "123 5th Ave, Kirkland, WA 98033",
+    "website": "https://www.kirklandwa.gov/Government/Departments/Fire-Department",
+    "lat": 47.6782,
+    "lon": -122.2072,
+    "zones": [
+      "North"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Post-Crisis",
@@ -1197,7 +1312,7 @@
     "parent_org": "Port of Seattle",
     "type": "Law Enforcement Co-Response",
     "population": "Adult & Youth",
-    "geographic_area": "SeaTac Airport",
+    "geographic_area": "SeaTac Airport (airport crises only)",
     "how_accessed": "911, First Responder referral, Self-dispatch, Community Request",
     "refers_to": "CCCs, DCR, Emergency Department, Community Resources",
     "address": "17801 International Blvd, SeaTac, WA 98158",
@@ -1238,6 +1353,25 @@
     "rc_annual_calls": 2800,
     "rc_serves": "Bryn Mawr-Skyway, Covington, Enumclaw, Kent, Maple Valley, Renton, SeaTac, Tukwila",
     "rc_zips": "98022, 98030, 98032, 98038, 98042, 98055, 98056, 98058, 98059, 98168, 98178, 98188, 98198"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Puget Sound Regional Fire Authority",
+    "parent_org": "Puget Sound Regional Fire Authority",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Covington, Kent, Maple Valley, SeaTac, Tukwila",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Puget Sound FD CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "20811 84th Avenue S, Suite 106 Kent, WA 98032",
+    "website": "https://pugetsoundfire.org/",
+    "lat": 47.4146,
+    "lon": -122.2289,
+    "zones": [
+      "South"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Outreach/Engage",
@@ -1366,6 +1500,25 @@
     ]
   },
   {
+    "category": "Someone to Respond",
+    "program": "Redmond Fire Department",
+    "parent_org": "Redmond Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Redmond, Union Hill/Redmond Ridge area",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Redmond Fire MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "8450 161st Avenue NE Redmond, WA 98052",
+    "website": "https://www.redmond.gov/161/Fire",
+    "lat": 47.6781,
+    "lon": -122.1248,
+    "zones": [
+      "East"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
     "category": "Post-Crisis",
     "program": "Redmond Fire Department MIH",
     "parent_org": "Redmond Fire Department",
@@ -1407,6 +1560,48 @@
     "rc_annual_calls": 750,
     "rc_serves": "Redmond",
     "rc_zips": "98052"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Regional Crisis Response (RCR) Agency",
+    "parent_org": "City Councils: Bothell, Kenmore, Kirkland, Lake Forest Park, and Shoreline",
+    "type": "Law Enforcement Co-Response",
+    "population": "Adult & Youth",
+    "geographic_area": "Bothell, Kenmore, Kirkland, Lake Forest Park, and Shoreline",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Shoreline Fire MIH, Kirkland Fire Department, Kirkland Fire MIH, CCCs, DCR, Emergency Department, Community Resources, BH care/counseling, Social Services, Primary care/Medical care",
+    "address": "17500 Midvale Ave N Shoreline, WA 98133-4905| \n\n123 5th Ave Kirkland, Washington 98033 | \n\n18415 101st Avenue NE Bothell, WA 98011 | \n\n18120 68th Ave NE Kenmore, WA 98028 | \n\n17425 Ballinger Way NE Lake Forest Park, WA 98155",
+    "website": "https://www.shorelinewa.gov/government/departments/police-department/radar\n\nhttps://www.kirklandwa.gov/Government/City-Managers-Office/The-Regional-Crisis-Response-Agency\n\nhttps://www.bothellwa.gov/1795/Regional-Crisis-Response-Agency\n\nhttps://cityoflfp.gov/622/Regional-Crisis-Response-Agency",
+    "lat": 47.7562,
+    "lon": -122.3436,
+    "zones": [
+      "North"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "LE co-response",
+    "rc_year_start": "2016",
+    "rc_annual_calls": 2000,
+    "rc_serves": "Bothell, Kenmore, Kirkland, Lake Forest Park, Shoreline",
+    "rc_zips": "98011, 98012, 98021, 98028, 98033, 98034, 98041, 98133, 98155, 98177"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Renton Regional Fire Authority",
+    "parent_org": "Renton Regional Fire Authority",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Renton, Fairwood/Spring Glen/SE Catchment (Council District 9)",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Renton Fire CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "18002 108th Ave SE, Renton, WA 98055",
+    "website": "https://rentonrfa.com/",
+    "lat": 47.4367,
+    "lon": -122.1685,
+    "zones": [
+      "South"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Outreach/Engage",
@@ -1484,7 +1679,7 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach",
+    "oe_subtype": "City-Based Outreach",
     "rc_year_start": "2023",
     "rc_annual_calls": 3000,
     "rc_serves": "Seattle",
@@ -1577,6 +1772,25 @@
     ]
   },
   {
+    "category": "Someone to Respond",
+    "program": "Seattle Fire Department",
+    "parent_org": "Seattle Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Seattle",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "SFD Health One/MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "301 2nd Ave S, Seattle, WA 98104",
+    "website": "https://www.seattle.gov/fire",
+    "lat": 47.5998,
+    "lon": -122.332,
+    "zones": [
+      "Central"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
     "category": "Post-Crisis",
     "program": "Seattle Fire Department Health One/MIH",
     "parent_org": "Seattle Fire Department",
@@ -1642,6 +1856,25 @@
     "rc_zips": "98101, 98102, 98103, 98104, 98105, 98106, 98107, 98108, 98109, 98112, 98113, 98115, 98116, 98117, 98118, 98119, 98121, 98122, 98125, 98126, 98133, 98134, 98136, 98141, 98144, 98146, 98154, 98161, 98165, 98170, 98174, 98175, 98177, 98178, 98181, 98185, 98190, 98191, 98194, 98199"
   },
   {
+    "category": "Someone to Respond",
+    "program": "Shoreline Fire Department",
+    "parent_org": "Shoreline Fire Department",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Shoreline, Lake Forest Park, Kenmore, Woodway",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Shoreline Fire MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "17525 Aurora Ave N. Shoreline, WA 98133",
+    "website": "https://shorelinefire.com/",
+    "lat": 47.7566,
+    "lon": -122.3464,
+    "zones": [
+      "North"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
     "category": "Post-Crisis",
     "program": "Shoreline Fire Department MIH",
     "parent_org": "Shoreline Fire Department",
@@ -1679,6 +1912,25 @@
     ],
     "dot_style": "solid",
     "stc_subtype": "LE co-response"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Snoqualmie Pass Fire & Rescue",
+    "parent_org": "Snoqualmie Pass Fire & Rescue",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Snoqualmie",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "Redmond Fire MIH, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "1211 State Route 906, Snoqualmie Pass, WA 98068",
+    "website": "https://www.snoqualmiepassfirerescue.org/",
+    "lat": 47.4271,
+    "lon": -121.4241,
+    "zones": [
+      "East"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Somewhere Safe to Go",
@@ -1787,6 +2039,25 @@
     ],
     "dot_style": "solid",
     "stc_subtype": "LE co-response"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "South King Fire & Rescue",
+    "parent_org": "South King Fire & Rescue",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Federal Way, Des Moines, Milton",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "South King Fire CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "31617 1st Ave S. Federal Way, WA 98003",
+    "website": "https://www.southkingfire.org/",
+    "lat": 47.3185,
+    "lon": -122.3357,
+    "zones": [
+      "South"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Post-Crisis",
@@ -2158,7 +2429,7 @@
       "Central"
     ],
     "dot_style": "solid",
-    "oe_subtype": "Outreach"
+    "oe_subtype": "City-Based Outreach"
   },
   {
     "category": "Outreach/Engage",
@@ -2201,6 +2472,25 @@
     ]
   },
   {
+    "category": "Someone to Respond",
+    "program": "Valley Regional Fire Authority",
+    "parent_org": "Valley Regional Fire Authority",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Auburn, Algona, Pacific",
+    "how_accessed": "911, First Responder referral, Self-dispatch",
+    "refers_to": "VRFA CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "1101 D Street NE Auburn WA 98002",
+    "website": "https://www.vrfa.org/",
+    "lat": 47.3177,
+    "lon": -122.2255,
+    "zones": [
+      "South"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
+  },
+  {
     "category": "Post-Crisis",
     "program": "Valley Regional Fire Authority (VRFA) CARES",
     "parent_org": "Valley Regional Fire Authority",
@@ -2223,6 +2513,25 @@
     "rc_annual_calls": 565,
     "rc_serves": "Algona, Auburn, Black Diamond (partial), Pacific",
     "rc_zips": "98001, 98002, 98010, 98047, 98092"
+  },
+  {
+    "category": "Someone to Respond",
+    "program": "Vashon Island Fire & Rescue",
+    "parent_org": "Vashon Island Fire & Rescue",
+    "type": "Fire/EMS",
+    "population": "Adult & Youth",
+    "geographic_area": "Vashon Island",
+    "how_accessed": "911, First Responder referral, Self-dispatch, Community Request",
+    "refers_to": "Vashon Fire MIH/CARES, MRRCT, MRSS, CCCs, DCR, Emergency Department",
+    "address": "10020 SW Bank Rd, Vashon, WA 98070",
+    "website": "https://vifr.org/",
+    "lat": 47.4478,
+    "lon": -122.4628,
+    "zones": [
+      "Central"
+    ],
+    "dot_style": "solid",
+    "stc_subtype": "Fire/EMS"
   },
   {
     "category": "Post-Crisis",
